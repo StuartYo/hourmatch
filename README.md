@@ -33,6 +33,10 @@ See `eval/RESULTS.md`. Same model, same claims. The model alone gets the full ho
 
 Limit: if one national registry published hourly certificates with open read access, it could do most of this without a chain.
 
+## On chain (Ethereum Sepolia testnet)
+
+Contract [`0x5Fd952504449Cf291FBFAe6CBe9daaa1CE5Ecf18`](https://sepolia.etherscan.io/address/0x5Fd952504449Cf291FBFAe6CBe9daaa1CE5Ecf18), chain id 11155111. One demo day (8 October 2026) is written on chain: plant registration, hourly issuance, metered use, same-hour retirements, two retirement attempts the contract refused, and one anchored claim whose matched share (82.8%) the contract computed itself. All transaction hashes are in `deployments/sepolia.json`. Test ETH only; no real money.
+
 ## Repository
 
 | Path | What |
@@ -67,7 +71,7 @@ node eval/run_eval.mjs holdout both
 Testnet deployment (testnet only; the key is read from your environment, never from a file):
 
 ```bash
-npx hardhat run scripts/deploy.cjs --network baseSepolia
+npx hardhat run scripts/deploy.cjs --network sepolia
 ```
 
 ## Rules in the checker

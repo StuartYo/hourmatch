@@ -1,6 +1,6 @@
 // Deploy the registry to a testnet and write one demo day on chain.
 // Testnet only. The key is read from the user environment (CLIMATECHAIN_TESTNET_PK), never from a file.
-// Usage: npx hardhat run scripts/deploy.cjs --network baseSepolia
+// Usage: npx hardhat run scripts/deploy.cjs --network sepolia   (Ethereum Sepolia, chain id 11155111)
 // Output: deployments/<network>.json (addresses and tx hashes only, no secrets)
 const fs = require("node:fs");
 const path = require("node:path");
@@ -13,7 +13,7 @@ const imp = (p) => import(pathToFileURL(path.join(__dirname, "..", p)).href);
 
 async function main() {
   const net = hre.network.name;
-  if (!["sepolia", "baseSepolia", "hardhat"].includes(net)) throw new Error("testnets only (sepolia, baseSepolia; hardhat = local dry run)");
+  if (!["sepolia", "hardhat"].includes(net)) throw new Error("testnets only (sepolia; hardhat = local dry run)");
   const [deployer] = await ethers.getSigners();
   const bal = await ethers.provider.getBalance(deployer.address);
   console.log("network", net, "deployer", deployer.address, "balance", ethers.formatEther(bal));
@@ -86,6 +86,38 @@ async function main() {
       out.doubleMatch = "reverted: " + (e.shortMessage || e.message).slice(0, 160);
     }
   }
+  // Real on-chain attempts that must fail, so the rejection is visible on the block explorer.
+  // gasLimit is set by hand because gas estimation would refuse to send a reverting tx.
+  const sendExpectFail = async (label, make) => {
+    if (net === "hardhat") return; // local dry run: the static calls above already prove it
+    if (++n > MAX_TX) throw new Error("tx cap reached");
+    const tx = await make();
+    let status = "mined";
+    try {
+      const r = await tx.wait();
+      status = r.status === 1 ? "SUCCEEDED (bug)" : "reverted";
+    } catch (e) {
+      status = "reverted";
+    }
+    out.txs.push({ label, hash: tx.hash, status });
+    console.log(label, tx.hash, status);
+  };
+  if (first) {
+    const left = await c.balanceOf(first.args[0], me);
+    await sendExpectFail("rejected: sell/retire more than is left", () => c.retire(first.args[0], left + 1n, b32("CLOUDLINE-DC"), hourOf(first.args[0]), { gasLimit: 120000 }));
+    const full = byConsumer["NORTHBAY-FAB"].find((o) => {
+      const r = scn.ledger.hourly("NORTHBAY-FAB", o.args[3], o.args[3] + 1n)[0];
+      return r.consumed > 0n && r.matched === r.consumed;
+    });
+    if (full) await sendExpectFail("rejected: retire again for an hour already fully matched", () => c.retire(full.args[0], 1n, b32("NORTHBAY-FAB"), hourOf(full.args[0]), { gasLimit: 120000 }));
+  }
+  // anchor one public claim; the contract computes the matched share itself
+  const claimText = `Northbay Fab ran on 100% renewable electricity on ${scn.hours[DAY * 24].hour.slice(0, 10)}.`;
+  out.anchoredClaim = { text: claimText, hash: ethers.id(claimText) };
+  await send("anchor claim", c.anchorClaim(ethers.id(claimText), b32("NORTHBAY-FAB"), from, to, 10000));
+  out.anchoredClaim.matchedBps = Number((await c.matchedBps(b32("NORTHBAY-FAB"), from, to))[0]);
+  out.explorer = net === "sepolia" ? "https://sepolia.etherscan.io" : null;
+  out.chainId = Number((await ethers.provider.getNetwork()).chainId);
   for (const cons of Object.keys(byConsumer)) {
     const [bps] = await c.matchedBps(b32(cons), from, to);
     out[`matchedBps_${cons}`] = Number(bps);

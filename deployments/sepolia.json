@@ -1,0 +1,98 @@
+{
+ "network": "sepolia",
+ "contract": "0x5Fd952504449Cf291FBFAe6CBe9daaa1CE5Ecf18",
+ "deployTx": "0x7d87c9c291352b52b55b60f7a906ac87b84f5d68a7852b985ce426e106a6fa31",
+ "day": {
+  "from": "497608",
+  "to": "497632"
+ },
+ "txs": [
+  {
+   "label": "register Sunfield Solar (fictional)",
+   "hash": "0xceffee8367c1cd7ddca5c9727ff7d83ba787932ec4a5ac60235a71b27794c1a5",
+   "gas": "241406"
+  },
+  {
+   "label": "register Strait Wind (fictional)",
+   "hash": "0xce02c48032115558ab1b590dfc55d0b347f01671fe6986d22ab2f746e8787e72",
+   "gas": "241370"
+  },
+  {
+   "label": "register Old Creek Hydro (fictional)",
+   "hash": "0xffd70ab31c989567106472c5c0227ab2b6c4e2daf8998df36692f9b15b5d6580",
+   "gas": "241418"
+  },
+  {
+   "label": "issue generator 1",
+   "hash": "0x0d616082f1fc5a21cb725b9567bf37293f158b6cba7e9b45dade610b93e0218a",
+   "gas": "2925063"
+  },
+  {
+   "label": "issue generator 2",
+   "hash": "0x73ba5cb12f060693e530890995449c2e2be0fb964be8b8b348fa1112f6940f4c",
+   "gas": "5379340"
+  },
+  {
+   "label": "issue generator 3",
+   "hash": "0xb24ca7711b7b3d2502aa8b94bae1e2d3176f8d448443c0fa3d5c35a1d7c9c66c",
+   "gas": "5379340"
+  },
+  {
+   "label": "meter NORTHBAY-FAB",
+   "hash": "0x19bd848fd433e3402875b260ce14fffc0f597114fd83252e6bec3fcec1c6d8c7",
+   "gas": "2731000"
+  },
+  {
+   "label": "meter HARBOR-OFFICE",
+   "hash": "0x5bd9dedf9ca83e9ba19447649c6acff3d36d4a759dae7ba760eca36b95b28607",
+   "gas": "2731012"
+  },
+  {
+   "label": "meter CLOUDLINE-DC",
+   "hash": "0x9d1c3d9336af335cc987d0463dd5959d069cf87933e332ba5d1f8dff553cc236",
+   "gas": "2731000"
+  },
+  {
+   "label": "retire NORTHBAY-FAB",
+   "hash": "0x5b2596d6865217a3bf24691ee3509aff753ab251587fc119c6a470a26901e646",
+   "gas": "7150215"
+  },
+  {
+   "label": "retire HARBOR-OFFICE",
+   "hash": "0xd535fd5fca008d7173cd58f5fc48614f248755262da1988bf83a0cf7d721a351",
+   "gas": "6003591"
+  },
+  {
+   "label": "retire CLOUDLINE-DC",
+   "hash": "0x76f900c0dcaff93b4bd51610aeb9d5ec33530f9f3ee49e643bfcf4e30c91a1a2",
+   "gas": "3540159"
+  },
+  {
+   "label": "rejected: sell/retire more than is left",
+   "hash": "0x6781eb0f11a2909d3000ac368139fc4bafa651848835557d57ff0b68d1995b0a",
+   "status": "reverted"
+  },
+  {
+   "label": "rejected: retire again for an hour already fully matched",
+   "hash": "0x30c58b4622b2b03dfca3c4b26df1c309694ca0356210756f1754ff18f4f9b5ae",
+   "status": "reverted"
+  },
+  {
+   "label": "anchor claim",
+   "hash": "0xcecf7da0d4086d3fc53bcc457754ed34dd54a0f5a722878a3368fc08ec0ec083",
+   "gas": "244662"
+  }
+ ],
+ "doubleSale": "reverted: execution reverted",
+ "doubleMatch": "reverted: execution reverted",
+ "anchoredClaim": {
+  "text": "Northbay Fab ran on 100% renewable electricity on 2026-10-08.",
+  "hash": "0x9b999ae0a786425a6402d94448707339bc4f635d429309ee0986c28cc0170741",
+  "matchedBps": 8284
+ },
+ "explorer": "https://sepolia.etherscan.io",
+ "chainId": 11155111,
+ "matchedBps_NORTHBAY-FAB": 8284,
+ "matchedBps_HARBOR-OFFICE": 8088,
+ "matchedBps_CLOUDLINE-DC": 8923
+}

@@ -67,7 +67,8 @@ td.num{font-family:"IBM Plex Mono",monospace}
 .mono{font-family:"IBM Plex Mono",monospace;font-size:13px;word-break:break-all}
 .muted{color:var(--muted)}
 .why{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-@media (max-width:860px){.why{grid-template-columns:1fr}.big{grid-template-columns:1fr 1fr}}
+@media (max-width:860px){.why{grid-template-columns:1fr}}
+@media (max-width:600px){.big{gap:6px}.stat{padding:9px}.stat .v{font-size:21px}.stat .k{font-size:12px}.stat .v span{font-size:12px!important}}
 .why div{border-top:2px solid var(--ink);padding-top:8px;font-size:14px}
 .why b{display:block;margin-bottom:4px;font-size:15px}
 footer{margin-top:28px;font-size:13px;color:var(--muted)}
@@ -83,6 +84,7 @@ a{color:inherit}
     <button class="theme" id="theme" type="button">Theme</button>
   </header>
   <p class="lede">A factory can buy enough solar certificates to say "100% renewable" while running on gas every night. HourMatch issues renewable certificates per plant per hour on a shared ledger, lets each one be retired once and only against the same hour's metered use, then checks any green-power claim against that ledger.</p>
+  <p class="muted" style="max-width:780px;margin:0 0 14px;font-size:15px">Why it matters: in a study of 115 companies with science-based targets, about two thirds of the Scope 2 cuts they reported for 2015 to 2019 came from certificates rather than real reductions (Bjørn et al., Nature Climate Change, 2022). The GHG Protocol opened a public consultation on hourly matching in 2025.</p>
   <div class="note"><b>Demo data.</b> Every company, power plant and contract here is fictional. The hourly solar, wind and hydro output curves are real: Taiwan Power Company open data, 6 to 12 October 2026 (data.gov.tw dataset 8931), scaled down to plant size.</div>
 
   <div class="grid">
@@ -110,12 +112,18 @@ a{color:inherit}
         <span><i style="background:var(--hydro)"></i>matched by hydro</span>
         <span><i style="background:var(--night);border:1px solid var(--line)"></i>outside the claim</span>
       </div>
+      <div class="section" id="daily"></div>
     </div>
   </div>
 
   <div class="panel section">
     <h2>What the shared ledger refused this week</h2>
     <div id="refusals"></div>
+  </div>
+
+  <div class="panel section">
+    <h2>On a public test chain</h2>
+    <div id="chainBox"></div>
   </div>
 
   <div class="panel section">

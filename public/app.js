@@ -152,6 +152,23 @@ function render(c) {
     <div class="stat"><div class="v">${pct(r.hourlyBps)}</div><div class="k">hour by hour: retired in the same hour / use</div></div>
     <div class="stat"><div class="v">${r.fullyMatchedHours}<span style="font-size:16px"> / ${r.hours} h</span></div><div class="k">hours fully covered by same-hour certificates</div></div>`;
   drawChart(c);
+  drawDaily(r);
+}
+
+function drawDaily(r) {
+  const byDay = new Map();
+  for (const h of r.hourly) {
+    const d = h.hour.slice(0, 10);
+    const x = byDay.get(d) || { use: 0, matched: 0, bought: 0 };
+    x.use += h.consumed;
+    x.matched += h.matched;
+    x.bought += h.bought;
+    byDay.set(d, x);
+  }
+  const mwh = (k) => (k / 1000).toLocaleString(undefined, { maximumFractionDigits: 1 });
+  $("daily").innerHTML = `<table><tr><th>Day</th><th>Use, MWh</th><th>On paper</th><th>Hour by hour</th></tr>${[...byDay]
+    .map(([d, x]) => `<tr><td class="num">${d.slice(5)}</td><td class="num">${mwh(x.use)}</td><td class="num">${x.use ? ((x.bought / x.use) * 100).toFixed(1) : "0.0"}%</td><td class="num">${x.use ? (Math.floor((x.matched * 10000) / x.use) / 100).toFixed(1) : "0.0"}%</td></tr>`)
+    .join("")}</table>`;
 }
 
 function drawChart(c) {
@@ -200,8 +217,9 @@ function drawChart(c) {
 }
 
 // ---------- refusals and evaluation
-$("refusals").innerHTML = `<table><tr><th>Hour (UTC+8)</th><th>What was tried</th><th>Ledger answer</th></tr>${scn.log
-  .map((l) => `<tr><td class="num">${esc(l.hour.slice(0, 16).replace("T", " "))}</td><td>Strait Wind (fictional) sells ${l.kwh.toLocaleString()} kWh of certificates for this hour to Harbor Office, after already selling the hour's full output to Northbay Fab and Cloudline Data Center</td><td class="num">${l.type === "double-sale-rejected" ? "refused: " + esc(l.error) : "accepted"}</td></tr>`)
+$("refusals").innerHTML = `<p style="margin-top:0">Strait Wind (fictional) had already sold each hour's full output to Northbay Fab and Cloudline Data Center. It then tried to sell the same hours again to Harbor Office.</p>
+  <table><tr><th>Hour (UTC+8)</th><th>Second sale tried</th><th>Ledger answer</th></tr>${scn.log
+  .map((l) => `<tr><td class="num">${esc(l.hour.slice(0, 16).replace("T", " "))}</td><td class="num">${l.kwh.toLocaleString()} kWh</td><td class="num">${l.type === "double-sale-rejected" ? "refused (" + esc(l.error) + ")" : "accepted"}</td></tr>`)
   .join("")}</table>`;
 
 const S = meta.summary;
@@ -211,14 +229,32 @@ if (S.available) {
   <table><tr><th>Setup</th><th>Correct verdicts</th><th>Share within 1 point</th></tr>
   ${row("HourMatch (model parses, code decides)", S.system)}${row("Model alone, with the same data", S.pure)}
   ${S.holdout ? row("HourMatch, held-out week (22 to 28 Sep)", S.holdout.system) + row("Model alone, held-out week", S.holdout.pure) : ""}</table>
+  <p style="font-size:14px">For scale: answering "NOT SUPPORTED" to every dev claim would also get 10 of 18 right. The model alone mostly said no; it rejected 5 of the 8 true claims, and its percentages were off by more than one point in 13 of 18 cases.</p>
   <p class="muted" style="font-size:13px">Run on ${esc(S.date.slice(0, 10))}. Script: eval/run_eval.mjs. Raw answers: eval/results_dev.json.</p>`;
 } else {
   $("evalBox").textContent = "Evaluation not run yet.";
 }
 
-const dep = meta.deployments.baseSepolia || meta.deployments.sepolia;
-$("chainInfo").innerHTML = dep
-  ? `Contract on ${esc(dep.network)}: <span class="mono">${esc(dep.contract)}</span>`
-  : "Contract: tested on a local Hardhat chain (tests replay this full week, 1,376 ledger writes). Testnet deployment pending.";
+const dep = meta.deployments.sepolia;
+if (dep) {
+  const ex = dep.explorer || "https://sepolia.etherscan.io";
+  const link = (h, t) => `<a href="${ex}/tx/${esc(h)}" target="_blank" rel="noopener">${esc(t)}</a>`;
+  const pick = (re) => dep.txs.find((t) => re.test(t.label));
+  const rows = [
+    ["Certificates issued for one day (Strait Wind, 24 hourly ids)", pick(/^issue generator 2/), "succeeded"],
+    ["Northbay Fab retires same-hour certificates", pick(/^retire NORTHBAY/), "succeeded"],
+    ["Retire more certificates than are left for that hour", pick(/more than is left/), "refused by the contract"],
+    ["Retire again for an hour that is already fully matched", pick(/already fully matched/), "refused by the contract"],
+    ["Anchor the claim \"" + dep.anchoredClaim.text + "\"", pick(/^anchor claim/), `stored with ${(dep.anchoredClaim.matchedBps / 100).toFixed(1)}% computed on chain`],
+  ].filter((r) => r[1]);
+  $("chainBox").innerHTML = `<p style="margin-top:0">Contract <a class="mono" href="${ex}/address/${esc(dep.contract)}" target="_blank" rel="noopener">${esc(dep.contract)}</a> on Ethereum Sepolia testnet (chain id ${esc(dep.chainId || 11155111)}). One demo day, 8 October 2026, written on chain; test money only.</p>
+  <table><tr><th>What happened</th><th>Transaction</th><th>Result</th></tr>${rows
+    .map((r) => `<tr><td>${esc(r[0])}</td><td class="mono">${link(r[1].hash, r[1].hash.slice(0, 10) + "...")}</td><td>${esc(r[2])}</td></tr>`)
+    .join("")}</table>`;
+  $("chainInfo").innerHTML = `Contract on Ethereum Sepolia: <span class="mono">${esc(dep.contract)}</span>`;
+} else {
+  $("chainBox").textContent = "Not deployed yet.";
+  $("chainInfo").textContent = "Contract: tested on a local Hardhat chain.";
+}
 
 run();
