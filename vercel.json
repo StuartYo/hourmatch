@@ -1,0 +1,6 @@
+{
+  "installCommand": "echo no-install",
+  "buildCommand": "echo prebuilt",
+  "outputDirectory": "public",
+  "functions": { "api/parse.js": { "maxDuration": 30 } }
+}

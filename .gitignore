@@ -6,3 +6,6 @@ cache/
 !.env.example
 .vercel
 deployments/hardhat.json
+
+.vercel
+eval/*.log

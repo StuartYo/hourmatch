@@ -1,7 +1,8 @@
 // Minimal OpenAI-compatible chat client.
 // Default: PublicAI free inference (Apertus, Swiss AI). Key only from environment variables.
 export const LLM_BASE_URL = process.env.LLM_BASE_URL || process.env.APERTUS_BASE_URL || "https://api.publicai.co/v1";
-export const LLM_MODEL = process.env.LLM_MODEL || "swiss-ai/apertus-70b-instruct";
+// Apertus 70B returned HTTP 429 on 2026-10-14 (free tier busy); Qwen-SEA-LION 32B answered.
+export const LLM_MODEL = process.env.LLM_MODEL || "aisingapore/Qwen-SEA-LION-v4-32B-IT";
 
 function apiKey() {
   return process.env.LLM_API_KEY || process.env.APERTUS_API_KEY || "";
@@ -43,7 +44,7 @@ export async function chat(messages, { model = LLM_MODEL, maxTokens = 600, timeo
 }
 
 export function extractJson(text) {
-  const cleaned = text.replace(/```(?:json)?/g, "").trim();
+  const cleaned = text.replace(/<think>[\s\S]*?<\/think>/g, "").replace(/```(?:json)?/g, "").trim();
   const start = cleaned.indexOf("{");
   const end = cleaned.lastIndexOf("}");
   if (start < 0 || end <= start) return null;

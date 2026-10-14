@@ -1,7 +1,248 @@
 {
  "summary": {
-  "available": false
+  "available": true,
+  "model": "aisingapore/Qwen-SEA-LION-v4-32B-IT",
+  "date": "2026-10-14T14:20:04.786Z",
+  "system": {
+   "n": 18,
+   "correct": 17,
+   "shareWithin1pt": 17
+  },
+  "pure": {
+   "n": 18,
+   "correct": 13,
+   "shareWithin1pt": 5
+  },
+  "holdout": {
+   "system": {
+    "n": 8,
+    "correct": 8,
+    "shareWithin1pt": 8
+   },
+   "pure": {
+    "n": 8,
+    "correct": 3,
+    "shareWithin1pt": 1
+   }
+  }
  },
- "cached": {},
+ "cached": {
+  "Northbay Fab ran on 100% renewable electricity this week.": {
+   "consumer_id": "NORTHBAY-FAB",
+   "start_date": "2026-10-06",
+   "end_date": "2026-10-12",
+   "hour_from": 0,
+   "hour_to": 24,
+   "weekdays_only": false,
+   "claimed_pct": 100,
+   "standard": "hourly",
+   "re100": false,
+   "claim_year": 2026
+  },
+  "Renewable energy certificates purchased by Northbay Fab covered 100% of its electricity consumption this week.": {
+   "consumer_id": "NORTHBAY-FAB",
+   "start_date": "2026-10-06",
+   "end_date": "2026-10-12",
+   "hour_from": 0,
+   "hour_to": 24,
+   "weekdays_only": false,
+   "claimed_pct": 100,
+   "standard": "volume",
+   "re100": false,
+   "claim_year": 2026
+  },
+  "Northbay Fab matched 83% of its electricity with renewable energy hour by hour this week.": {
+   "consumer_id": "NORTHBAY-FAB",
+   "start_date": "2026-10-06",
+   "end_date": "2026-10-12",
+   "hour_from": 0,
+   "hour_to": 24,
+   "weekdays_only": false,
+   "claimed_pct": 83,
+   "standard": "hourly",
+   "re100": false,
+   "claim_year": 2026
+  },
+  "Northbay Fab matched 95% of its electricity with renewable energy hour by hour this week.": {
+   "consumer_id": "NORTHBAY-FAB",
+   "start_date": "2026-10-06",
+   "end_date": "2026-10-12",
+   "hour_from": 0,
+   "hour_to": 24,
+   "weekdays_only": false,
+   "claimed_pct": 95,
+   "standard": "hourly",
+   "re100": false,
+   "claim_year": 2026
+  },
+  "Northbay Fab was fully powered by renewables around the clock on 2026-10-08.": {
+   "consumer_id": "NORTHBAY-FAB",
+   "start_date": "2026-10-08",
+   "end_date": "2026-10-08",
+   "hour_from": 0,
+   "hour_to": 24,
+   "weekdays_only": false,
+   "claimed_pct": 100,
+   "standard": "hourly",
+   "re100": false,
+   "claim_year": 2026
+  },
+  "Between 10:00 and 14:00 on 2026-10-07, every kWh used by Northbay Fab was renewable.": {
+   "consumer_id": "NORTHBAY-FAB",
+   "start_date": "2026-10-07",
+   "end_date": "2026-10-07",
+   "hour_from": 10,
+   "hour_to": 14,
+   "weekdays_only": false,
+   "claimed_pct": 100,
+   "standard": "hourly",
+   "re100": false,
+   "claim_year": 2026
+  },
+  "Northbay Fab's night shift (00:00 to 06:00) on 2026-10-09 ran on 100% solar and wind power.": {
+   "consumer_id": "NORTHBAY-FAB",
+   "start_date": "2026-10-09",
+   "end_date": "2026-10-09",
+   "hour_from": 0,
+   "hour_to": 6,
+   "weekdays_only": false,
+   "claimed_pct": 100,
+   "standard": "hourly",
+   "re100": false,
+   "claim_year": 2026
+  },
+  "Harbor Office used 100% renewable electricity during business hours on weekdays this week.": {
+   "consumer_id": "HARBOR-OFFICE",
+   "start_date": "2026-10-06",
+   "end_date": "2026-10-12",
+   "hour_from": 8,
+   "hour_to": 19,
+   "weekdays_only": true,
+   "claimed_pct": 100,
+   "standard": "volume",
+   "re100": false,
+   "claim_year": 2026
+  },
+  "Harbor Office is 100% renewable, every hour of every day, this week.": {
+   "consumer_id": "HARBOR-OFFICE",
+   "start_date": "2026-10-06",
+   "end_date": "2026-10-12",
+   "hour_from": 0,
+   "hour_to": 24,
+   "weekdays_only": false,
+   "claimed_pct": 100,
+   "standard": "hourly",
+   "re100": false,
+   "claim_year": 2026
+  },
+  "All of Harbor Office's electricity this week was RE100-eligible renewable electricity, matched hour by hour.": {
+   "consumer_id": "HARBOR-OFFICE",
+   "start_date": "2026-10-06",
+   "end_date": "2026-10-12",
+   "hour_from": 0,
+   "hour_to": 24,
+   "weekdays_only": false,
+   "claimed_pct": 100,
+   "standard": "hourly",
+   "re100": true,
+   "claim_year": 2026
+  },
+  "Renewable certificates bought by Harbor Office equal 100% of its electricity consumption this week.": {
+   "consumer_id": "HARBOR-OFFICE",
+   "start_date": "2026-10-06",
+   "end_date": "2026-10-12",
+   "hour_from": 0,
+   "hour_to": 24,
+   "weekdays_only": false,
+   "claimed_pct": 100,
+   "standard": "volume",
+   "re100": false,
+   "claim_year": 2026
+  },
+  "Cloudline Data Center ran on 100% wind power on 2026-10-08.": {
+   "consumer_id": "CLOUDLINE-DC",
+   "start_date": "2026-10-08",
+   "end_date": "2026-10-08",
+   "hour_from": 0,
+   "hour_to": 24,
+   "weekdays_only": false,
+   "claimed_pct": 100,
+   "standard": "hourly",
+   "re100": false,
+   "claim_year": 2026
+  },
+  "Cloudline Data Center matched 90% of its load with renewable electricity on an hourly basis this week.": {
+   "consumer_id": "CLOUDLINE-DC",
+   "start_date": "2026-10-06",
+   "end_date": "2026-10-12",
+   "hour_from": 0,
+   "hour_to": 24,
+   "weekdays_only": false,
+   "claimed_pct": 90,
+   "standard": "hourly",
+   "re100": false,
+   "claim_year": 2026
+  },
+  "Cloudline Data Center was 24/7 carbon-free from 2026-10-10 to 2026-10-12.": {
+   "consumer_id": "CLOUDLINE-DC",
+   "start_date": "2026-10-10",
+   "end_date": "2026-10-12",
+   "hour_from": 0,
+   "hour_to": 24,
+   "weekdays_only": false,
+   "claimed_pct": 100,
+   "standard": "hourly",
+   "re100": false,
+   "claim_year": 2026
+  },
+  "On 2026-10-11, Northbay Fab covered 81% of its electricity with same-hour renewable certificates.": {
+   "consumer_id": "NORTHBAY-FAB",
+   "start_date": "2026-10-11",
+   "end_date": "2026-10-11",
+   "hour_from": 0,
+   "hour_to": 24,
+   "weekdays_only": false,
+   "claimed_pct": 81,
+   "standard": "hourly",
+   "re100": false,
+   "claim_year": 2026
+  },
+  "Cloudline Data Center's certificates cover 100% of its use this week, so the data center matched 100% of its electricity hour by hour.": {
+   "consumer_id": "CLOUDLINE-DC",
+   "start_date": "2026-10-06",
+   "end_date": "2026-10-12",
+   "hour_from": 0,
+   "hour_to": 24,
+   "weekdays_only": false,
+   "claimed_pct": 100,
+   "standard": "hourly",
+   "re100": false,
+   "claim_year": 2026
+  },
+  "Harbor Office ran on 79% renewable power, hour by hour, on weekdays this week.": {
+   "consumer_id": "HARBOR-OFFICE",
+   "start_date": "2026-10-06",
+   "end_date": "2026-10-12",
+   "hour_from": 8,
+   "hour_to": 19,
+   "weekdays_only": true,
+   "claimed_pct": 79,
+   "standard": "hourly",
+   "re100": false,
+   "claim_year": 2026
+  },
+  "Northbay Fab is RE100-compliant this week, with 83% of its electricity matched every hour by renewable certificates.": {
+   "consumer_id": "NORTHBAY-FAB",
+   "start_date": "2026-10-06",
+   "end_date": "2026-10-12",
+   "hour_from": 0,
+   "hour_to": 24,
+   "weekdays_only": false,
+   "claimed_pct": 83,
+   "standard": "hourly",
+   "re100": true,
+   "claim_year": 2026
+  }
+ },
  "deployments": {}
 }

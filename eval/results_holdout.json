@@ -1,0 +1,241 @@
+{
+ "set": "holdout",
+ "model": "aisingapore/Qwen-SEA-LION-v4-32B-IT",
+ "date": "2026-10-14T14:21:30.653Z",
+ "system": {
+  "n": 8,
+  "correct": 8,
+  "shareWithin1pt": 8
+ },
+ "pure": {
+  "n": 8,
+  "correct": 3,
+  "shareWithin1pt": 1
+ },
+ "rows": [
+  {
+   "id": "H01",
+   "text": "Northbay Fab: 100% green electricity for the whole week.",
+   "truth": "NOT_SUPPORTED",
+   "truthBasis": "hourly",
+   "truthShare": 65.44,
+   "system": {
+    "verdict": "NOT_SUPPORTED",
+    "share": 65.44,
+    "parsed": {
+     "consumer_id": "NORTHBAY-FAB",
+     "start_date": "2026-09-22",
+     "end_date": "2026-09-28",
+     "hour_from": 0,
+     "hour_to": 24,
+     "weekdays_only": false,
+     "claimed_pct": 100,
+     "standard": "hourly",
+     "re100": false,
+     "claim_year": 2026
+    }
+   },
+   "pure": {
+    "verdict": "NOT_SUPPORTED",
+    "share": 99.5,
+    "basis": "hourly"
+   }
+  },
+  {
+   "id": "H02",
+   "text": "Northbay Fab's renewable certificate purchases this week totaled 100% of what the plant consumed.",
+   "truth": "SUPPORTED",
+   "truthBasis": "volume",
+   "truthShare": 103,
+   "system": {
+    "verdict": "SUPPORTED",
+    "share": 103,
+    "parsed": {
+     "consumer_id": "NORTHBAY-FAB",
+     "start_date": "2026-09-22",
+     "end_date": "2026-09-28",
+     "hour_from": 0,
+     "hour_to": 24,
+     "weekdays_only": false,
+     "claimed_pct": 100,
+     "standard": "volume",
+     "re100": false,
+     "claim_year": 2026
+    }
+   },
+   "pure": {
+    "verdict": "NOT_SUPPORTED",
+    "share": 100,
+    "basis": "volume"
+   }
+  },
+  {
+   "id": "H03",
+   "text": "Cloudline Data Center ran on renewable power every single hour on 2026-09-23.",
+   "truth": "SUPPORTED",
+   "truthBasis": "hourly",
+   "truthShare": 100,
+   "system": {
+    "verdict": "SUPPORTED",
+    "share": 100,
+    "parsed": {
+     "consumer_id": "CLOUDLINE-DC",
+     "start_date": "2026-09-23",
+     "end_date": "2026-09-23",
+     "hour_from": 0,
+     "hour_to": 24,
+     "weekdays_only": false,
+     "claimed_pct": 100,
+     "standard": "hourly",
+     "re100": false,
+     "claim_year": 2026
+    }
+   },
+   "pure": {
+    "verdict": "NOT_SUPPORTED",
+    "share": 100,
+    "basis": "hourly"
+   }
+  },
+  {
+   "id": "H04",
+   "text": "All of Harbor Office's weekday office-hours electricity this week came from renewables.",
+   "truth": "NOT_SUPPORTED",
+   "truthBasis": "hourly",
+   "truthShare": 71.65,
+   "system": {
+    "verdict": "NOT_SUPPORTED",
+    "share": 71.65,
+    "parsed": {
+     "consumer_id": "HARBOR-OFFICE",
+     "start_date": "2026-09-22",
+     "end_date": "2026-09-28",
+     "hour_from": 8,
+     "hour_to": 19,
+     "weekdays_only": true,
+     "claimed_pct": 100,
+     "standard": "volume",
+     "re100": false,
+     "claim_year": 2026
+    }
+   },
+   "pure": {
+    "verdict": "NOT_SUPPORTED",
+    "share": 99.5,
+    "basis": "hourly"
+   }
+  },
+  {
+   "id": "H05",
+   "text": "Harbor Office meets RE100 this week: certificates it bought cover 100% of its consumption.",
+   "truth": "NOT_SUPPORTED",
+   "truthBasis": "volume",
+   "truthShare": 105.01,
+   "system": {
+    "verdict": "NOT_SUPPORTED",
+    "share": 105.01,
+    "parsed": {
+     "consumer_id": "HARBOR-OFFICE",
+     "start_date": "2026-09-22",
+     "end_date": "2026-09-28",
+     "hour_from": 0,
+     "hour_to": 24,
+     "weekdays_only": false,
+     "claimed_pct": 100,
+     "standard": "volume",
+     "re100": true,
+     "claim_year": 2026
+    }
+   },
+   "pure": {
+    "verdict": "NOT_SUPPORTED",
+    "share": 100,
+    "basis": "volume"
+   }
+  },
+  {
+   "id": "H06",
+   "text": "From 2026-09-22 to 2026-09-24, Northbay Fab matched 86% of its electricity hour by hour.",
+   "truth": "SUPPORTED",
+   "truthBasis": "hourly",
+   "truthShare": 86.71,
+   "system": {
+    "verdict": "SUPPORTED",
+    "share": 86.71,
+    "parsed": {
+     "consumer_id": "NORTHBAY-FAB",
+     "start_date": "2026-09-22",
+     "end_date": "2026-09-24",
+     "hour_from": 0,
+     "hour_to": 24,
+     "weekdays_only": false,
+     "claimed_pct": 86,
+     "standard": "hourly",
+     "re100": false,
+     "claim_year": 2026
+    }
+   },
+   "pure": {
+    "verdict": "NOT_SUPPORTED",
+    "share": 85.5,
+    "basis": "hourly"
+   }
+  },
+  {
+   "id": "H07",
+   "text": "On 2026-09-26, Northbay Fab matched 48% of its electricity hour by hour.",
+   "truth": "NOT_SUPPORTED",
+   "truthBasis": "hourly",
+   "truthShare": 40.06,
+   "system": {
+    "verdict": "NOT_SUPPORTED",
+    "share": 40.06,
+    "parsed": {
+     "consumer_id": "NORTHBAY-FAB",
+     "start_date": "2026-09-26",
+     "end_date": "2026-09-26",
+     "hour_from": 0,
+     "hour_to": 24,
+     "weekdays_only": false,
+     "claimed_pct": 48,
+     "standard": "hourly",
+     "re100": false,
+     "claim_year": 2026
+    }
+   },
+   "pure": {
+    "verdict": "SUPPORTED",
+    "share": 48.5,
+    "basis": "hourly"
+   }
+  },
+  {
+   "id": "H08",
+   "text": "Cloudline Data Center: 100% of this week's consumption was covered by renewable certificate purchases.",
+   "truth": "SUPPORTED",
+   "truthBasis": "volume",
+   "truthShare": 103.99,
+   "system": {
+    "verdict": "SUPPORTED",
+    "share": 103.99,
+    "parsed": {
+     "consumer_id": "CLOUDLINE-DC",
+     "start_date": "2026-09-22",
+     "end_date": "2026-09-28",
+     "hour_from": 0,
+     "hour_to": 24,
+     "weekdays_only": false,
+     "claimed_pct": 100,
+     "standard": "volume",
+     "re100": false,
+     "claim_year": 2026
+    }
+   },
+   "pure": {
+    "verdict": "NOT_SUPPORTED",
+    "share": 100,
+    "basis": "volume"
+   }
+  }
+ ]
+}
