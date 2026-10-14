@@ -1,98 +1,371 @@
 {
  "network": "sepolia",
- "contract": "0x5Fd952504449Cf291FBFAe6CBe9daaa1CE5Ecf18",
- "deployTx": "0x7d87c9c291352b52b55b60f7a906ac87b84f5d68a7852b985ce426e106a6fa31",
+ "chainId": 11155111,
+ "explorer": "https://sepolia.etherscan.io",
  "day": {
   "from": "497608",
-  "to": "497632"
+  "to": "497632",
+  "date": "2026-10-08"
+ },
+ "wallets": {
+  "operator": "0x669A0a5C84d582199FC294b326F2F46eeEcf40C2",
+  "issuer-a": "0x9a93E7fE0dbCB752D7D4f5d868F77BA1D6AdEa71",
+  "issuer-b": "0xeBC5A45530570f16e5F743d60aD72D4174f0563a",
+  "NORTHBAY-FAB": "0x73a346C60eE81De5705ce08c5747FBdfBa4DAEa0",
+  "HARBOR-OFFICE": "0x31835BF0B3Ce68b525C3CB226837222C213975C6",
+  "CLOUDLINE-DC": "0xa7ACAEE32EcfbCA6e83c5fC8Bc529C048167bE63"
  },
  "txs": [
   {
-   "label": "register Sunfield Solar (fictional)",
-   "hash": "0xceffee8367c1cd7ddca5c9727ff7d83ba787932ec4a5ac60235a71b27794c1a5",
-   "gas": "241406"
+   "label": "fund issuer-a wallet",
+   "hash": "0x1d47a28f145777c38b8168741b6981308254bf9d3f40ce3dee75d61e405af58b",
+   "from": "operator",
+   "gas": "204600",
+   "status": "ok",
+   "block": 11914722
   },
   {
-   "label": "register Strait Wind (fictional)",
-   "hash": "0xce02c48032115558ab1b590dfc55d0b347f01671fe6986d22ab2f746e8787e72",
-   "gas": "241370"
+   "label": "fund issuer-b wallet",
+   "hash": "0x19f02954f407cd1b072c14c3ef3d78127834c7d2830d542ac124c744f0a34968",
+   "from": "operator",
+   "gas": "204600",
+   "status": "ok",
+   "block": 11914723
   },
   {
-   "label": "register Old Creek Hydro (fictional)",
-   "hash": "0xffd70ab31c989567106472c5c0227ab2b6c4e2daf8998df36692f9b15b5d6580",
-   "gas": "241418"
+   "label": "fund NORTHBAY-FAB wallet",
+   "hash": "0x811af8ce5d1a6421b3427ce72fa52a2ac83445d096153f50b4dd95eb2c1cc7cb",
+   "from": "operator",
+   "gas": "204600",
+   "status": "ok",
+   "block": 11914724
   },
   {
-   "label": "issue generator 1",
-   "hash": "0x0d616082f1fc5a21cb725b9567bf37293f158b6cba7e9b45dade610b93e0218a",
-   "gas": "2925063"
+   "label": "fund HARBOR-OFFICE wallet",
+   "hash": "0x8dd5e9b3d7108a90a9982be87e2b718f5a03ca8726ff4988c8258f4db0154088",
+   "from": "operator",
+   "gas": "204600",
+   "status": "ok",
+   "block": 11914725
   },
   {
-   "label": "issue generator 2",
-   "hash": "0x73ba5cb12f060693e530890995449c2e2be0fb964be8b8b348fa1112f6940f4c",
-   "gas": "5379340"
+   "label": "fund CLOUDLINE-DC wallet",
+   "hash": "0x805d588609b2822373b6deb691f0cddad0e9050cd60133cc5fbb32ffc24e98cb",
+   "from": "operator",
+   "gas": "204600",
+   "status": "ok",
+   "block": 11914726
   },
   {
-   "label": "issue generator 3",
-   "hash": "0xb24ca7711b7b3d2502aa8b94bae1e2d3176f8d448443c0fa3d5c35a1d7c9c66c",
-   "gas": "5379340"
+   "label": "deploy contract",
+   "hash": "0x3b320ac612ee1afc9e1b12dc7ee70d5ed8a6500804fa778615c3b3f56ccf379e",
+   "from": "operator",
+   "gas": "11277653",
+   "status": "ok",
+   "block": 11914727
   },
   {
-   "label": "meter NORTHBAY-FAB",
-   "hash": "0x19bd848fd433e3402875b260ce14fffc0f597114fd83252e6bec3fcec1c6d8c7",
-   "gas": "2731000"
+   "label": "add Issuer A",
+   "hash": "0x7c5474ee515f4623cb1c1ca99afaa5f3bebe6c574cd71b9fb0a641a9af59d2e2",
+   "from": "operator",
+   "gas": "127319",
+   "status": "ok",
+   "block": 11914728
   },
   {
-   "label": "meter HARBOR-OFFICE",
-   "hash": "0x5bd9dedf9ca83e9ba19447649c6acff3d36d4a759dae7ba760eca36b95b28607",
-   "gas": "2731012"
+   "label": "add Issuer B",
+   "hash": "0x40a74f62b3634598c8b53104e3208bcbaf33c1e28398682d42859043ab794d1e",
+   "from": "operator",
+   "gas": "127319",
+   "status": "ok",
+   "block": 11914729
   },
   {
-   "label": "meter CLOUDLINE-DC",
-   "hash": "0x9d1c3d9336af335cc987d0463dd5959d069cf87933e332ba5d1f8dff553cc236",
-   "gas": "2731000"
+   "label": "bind NORTHBAY-FAB to its wallet",
+   "hash": "0xfcbc6c6c05ae170dbf5e6149519a22b00e8a0ad104caf9d16fedae8fc22fabac",
+   "from": "operator",
+   "gas": "128055",
+   "status": "ok",
+   "block": 11914730
   },
   {
-   "label": "retire NORTHBAY-FAB",
-   "hash": "0x5b2596d6865217a3bf24691ee3509aff753ab251587fc119c6a470a26901e646",
-   "gas": "7150215"
+   "label": "bind HARBOR-OFFICE to its wallet",
+   "hash": "0x102a1dc60d1357254d65c62e63b2126648cdb7ecce487d31ea0e95efe1a38fc4",
+   "from": "operator",
+   "gas": "128067",
+   "status": "ok",
+   "block": 11914731
   },
   {
-   "label": "retire HARBOR-OFFICE",
-   "hash": "0xd535fd5fca008d7173cd58f5fc48614f248755262da1988bf83a0cf7d721a351",
-   "gas": "6003591"
+   "label": "bind CLOUDLINE-DC to its wallet",
+   "hash": "0xdc7aaa36b621e32ac927cecf5f8e17a7ac64d278e2f486aa23bad75638aa5430",
+   "from": "operator",
+   "gas": "128055",
+   "status": "ok",
+   "block": 11914732
   },
   {
-   "label": "retire CLOUDLINE-DC",
-   "hash": "0x76f900c0dcaff93b4bd51610aeb9d5ec33530f9f3ee49e643bfcf4e30c91a1a2",
-   "gas": "3540159"
+   "label": "Issuer A registers Sunfield Solar (fictional)",
+   "hash": "0xb9287e0d8a52d36d6f02963d058734e6f553e4e35dd1cfd98fadc7bae5691676",
+   "from": "issuer-a",
+   "gas": "354188",
+   "status": "ok",
+   "block": 11914733
   },
   {
-   "label": "rejected: sell/retire more than is left",
-   "hash": "0x6781eb0f11a2909d3000ac368139fc4bafa651848835557d57ff0b68d1995b0a",
-   "status": "reverted"
+   "label": "Issuer B registers Strait Wind (fictional)",
+   "hash": "0x5a017846f67528fa7080affa51a39f7e23609379cfa4b45ac92e54ed78bbbda1",
+   "from": "issuer-b",
+   "gas": "354152",
+   "status": "ok",
+   "block": 11914734
   },
   {
-   "label": "rejected: retire again for an hour already fully matched",
-   "hash": "0x30c58b4622b2b03dfca3c4b26df1c309694ca0356210756f1754ff18f4f9b5ae",
-   "status": "reverted"
+   "label": "Issuer A registers Old Creek Hydro (fictional)",
+   "hash": "0xe48bbe42bb62618d7e2ff26804ab0f9fc3355ea4f236d031e8ce6dda54d28af2",
+   "from": "issuer-a",
+   "gas": "354200",
+   "status": "ok",
+   "block": 11914735
   },
   {
-   "label": "anchor claim",
-   "hash": "0xcecf7da0d4086d3fc53bcc457754ed34dd54a0f5a722878a3368fc08ec0ec083",
-   "gas": "244662"
+   "label": "Issuer A issues one day of hourly certificates for Sunfield Solar (fictional)",
+   "hash": "0x7716e4e328d46c402b5ce98b7de0f9290002a63bc9b5f3be190df12c9ccf4718",
+   "from": "issuer-a",
+   "gas": "2929326",
+   "status": "ok",
+   "block": 11914736
+  },
+  {
+   "label": "Issuer B issues one day of hourly certificates for Strait Wind (fictional)",
+   "hash": "0xecb15dee76b723a780dfc13a1044c12d073caaf287431016940f721aca25639a",
+   "from": "issuer-b",
+   "gas": "5383537",
+   "status": "ok",
+   "block": 11914737
+  },
+  {
+   "label": "Issuer A issues one day of hourly certificates for Old Creek Hydro (fictional)",
+   "hash": "0x08ae35cc9c765bf78825f93b9abaca6f79295ce366eec3355da9325a513713ed",
+   "from": "issuer-a",
+   "gas": "5383537",
+   "status": "ok",
+   "block": 11914738
+  },
+  {
+   "label": "a company wallet tries to issue certificates",
+   "hash": "0xc0914d54413c35fb34d659c62fc385939a4ea3e2550d5422d3c4978900cf4df0",
+   "from": "NORTHBAY-FAB",
+   "status": "reverted",
+   "error": "NotIssuer",
+   "refused": true,
+   "gas": "25496",
+   "block": 11914739
+  },
+  {
+   "label": "Issuer B tries to issue for Issuer A's plant",
+   "hash": "0x238484495f3f63865d34b81ca40a2369d06788c54ebd20c0a5e565f1b78d10f3",
+   "from": "issuer-b",
+   "status": "reverted",
+   "error": "NotGeneratorIssuer",
+   "refused": true,
+   "gas": "25496",
+   "block": 11914740
+  },
+  {
+   "label": "Issuer A issues the same day again",
+   "hash": "0xcc9c510c0bd9d7818cbac5d1e60e3d5ae4e98a5c0d321414b09d49c9e1b6547e",
+   "from": "issuer-a",
+   "status": "reverted",
+   "error": "AlreadyIssued",
+   "refused": true,
+   "gas": "72600",
+   "block": 11914741
+  },
+  {
+   "label": "meter data for NORTHBAY-FAB",
+   "hash": "0xd803c2755fcd6ea830d7572d9376e9088de87117d3710b6e572acbaeda9c9a80",
+   "from": "operator",
+   "gas": "2733234",
+   "status": "ok",
+   "block": 11914742
+  },
+  {
+   "label": "meter data for HARBOR-OFFICE",
+   "hash": "0xf0845154f03768e13d589103c8ba8e8602da744747e3039c764aea61849b1bfb",
+   "from": "operator",
+   "gas": "2733246",
+   "status": "ok",
+   "block": 11914743
+  },
+  {
+   "label": "meter data for CLOUDLINE-DC",
+   "hash": "0x88a5064856492a0617006e2d59eef448a436a7dce2b4de53f6934159120a9dac",
+   "from": "operator",
+   "gas": "2733234",
+   "status": "ok",
+   "block": 11914744
+  },
+  {
+   "label": "Issuer A plant account sells 13 hourly certificates to NORTHBAY-FAB",
+   "hash": "0x45c0847a2ab90f98704e01919e5759d1ec9ccab1faf8058f4d45d0ffb54520e5",
+   "from": "issuer-a",
+   "gas": "1655615",
+   "status": "ok",
+   "block": 11914745
+  },
+  {
+   "label": "Issuer A plant account sells 37 hourly certificates to HARBOR-OFFICE",
+   "hash": "0xb6c87f14a7daf04461e45662013ec43c95f65e9f1d0fae7c81fdb333544f72ee",
+   "from": "issuer-a",
+   "gas": "4400383",
+   "status": "ok",
+   "block": 11914746
+  },
+  {
+   "label": "Issuer B plant account sells 24 hourly certificates to NORTHBAY-FAB",
+   "hash": "0xefd6480a473d0f76e75d62dd9f6aac9afd1990f9ec4d01b91407fd5856be2187",
+   "from": "issuer-b",
+   "gas": "3040516",
+   "status": "ok",
+   "block": 11914747
+  },
+  {
+   "label": "Issuer B plant account sells 24 hourly certificates to CLOUDLINE-DC",
+   "hash": "0xe4ae03d211e6dd1be1fcd37403530bc2aefd13e8bfabeb4a4428b51c40587839",
+   "from": "issuer-b",
+   "gas": "2889508",
+   "status": "ok",
+   "block": 11914748
+  },
+  {
+   "label": "Strait Wind sells an already sold hour again (double sale)",
+   "hash": "0xe00427d487bdcd3ea80b6c89ce3225fc350ae71a19c9ff0f70ec6cca2484e7c4",
+   "from": "issuer-b",
+   "status": "reverted",
+   "error": "InsufficientBalance",
+   "refused": true,
+   "gas": "21400",
+   "block": 11914749
+  },
+  {
+   "label": "Northbay resells a certificate it bought",
+   "hash": "0xbce97374e950933b733073a6d4c3e32f03394c60f3bb6a78c0bbe9fae4d93cd4",
+   "from": "NORTHBAY-FAB",
+   "status": "reverted",
+   "error": "OnlyOneTransfer",
+   "refused": true,
+   "gas": "21400",
+   "block": 11914750
+  },
+  {
+   "label": "NORTHBAY-FAB retires 35 same-hour certificates",
+   "hash": "0x5c23e90422217a4eb49ffbdb93873524fcd17e59df1a4590b2598931563572d0",
+   "from": "NORTHBAY-FAB",
+   "gas": "6845816",
+   "status": "ok",
+   "block": 11914751
+  },
+  {
+   "label": "HARBOR-OFFICE retires 37 same-hour certificates",
+   "hash": "0xc56224a4ae73bb847dd31afd4aab722863f35b72a3e582044e95744bd21c9a42",
+   "from": "HARBOR-OFFICE",
+   "gas": "5862228",
+   "status": "ok",
+   "block": 11914752
+  },
+  {
+   "label": "CLOUDLINE-DC retires 24 same-hour certificates",
+   "hash": "0x534f90f47bed05c7f5bb62fa29930f4dfb024aed65893953f8ec764a1052dd88",
+   "from": "CLOUDLINE-DC",
+   "gas": "3465814",
+   "status": "ok",
+   "block": 11914753
+  },
+  {
+   "label": "Cloudline's wallet tries to retire Northbay's certificates for Northbay",
+   "hash": "0x6333d9f5ed6c2a5ed38372662864399f00ed7c741480e6c2a7fc8dcee1abc59f",
+   "from": "CLOUDLINE-DC",
+   "status": "reverted",
+   "error": "NotConsumerWallet",
+   "refused": true,
+   "gas": "23448",
+   "block": 11914755
+  },
+  {
+   "label": "Cloudline's wallet tries to retire Northbay's certificates for itself",
+   "hash": "0x106b4da189f34a7a470a75047a21ea24a277e18a95dec1f23534bd7094929bcf",
+   "from": "CLOUDLINE-DC",
+   "status": "reverted",
+   "error": "InsufficientBalance",
+   "refused": true,
+   "gas": "23448",
+   "block": 11914756
+  },
+  {
+   "label": "Northbay retires again for an hour already fully matched",
+   "hash": "0xd067f531fb3a282074cc751c527a646e935da0dcc11b0d18b33a1afeba4a1a1c",
+   "from": "NORTHBAY-FAB",
+   "status": "reverted",
+   "error": "ExceedsUnmatchedConsumption",
+   "refused": true,
+   "gas": "25467",
+   "block": 11914757
+  },
+  {
+   "label": "Cloudline's wallet tries to anchor a claim about Northbay",
+   "hash": "0x5f50c051528b38d87e4485a79e016f327487031ffaba237c27cdb96ceed5f1e6",
+   "from": "CLOUDLINE-DC",
+   "status": "reverted",
+   "error": "NotConsumerWallet",
+   "refused": true,
+   "gas": "25496",
+   "block": 11914758
+  },
+  {
+   "label": "Northbay anchors its own claim",
+   "hash": "0xd1c8724fb139eb3c73080fe156ba76da0bf664beec0be10247e9301cdd34bf21",
+   "from": "NORTHBAY-FAB",
+   "gas": "246890",
+   "status": "ok",
+   "block": 11914759
   }
  ],
- "doubleSale": "reverted: execution reverted",
- "doubleMatch": "reverted: execution reverted",
+ "contract": "0xcA60934442d09fc62F7CEd7B424a2939ea89D4d6",
+ "deployTx": "0x3b320ac612ee1afc9e1b12dc7ee70d5ed8a6500804fa778615c3b3f56ccf379e",
  "anchoredClaim": {
   "text": "Northbay Fab ran on 100% renewable electricity on 2026-10-08.",
   "hash": "0x9b999ae0a786425a6402d94448707339bc4f635d429309ee0986c28cc0170741",
   "matchedBps": 8284
  },
- "explorer": "https://sepolia.etherscan.io",
- "chainId": 11155111,
- "matchedBps_NORTHBAY-FAB": 8284,
- "matchedBps_HARBOR-OFFICE": 8088,
- "matchedBps_CLOUDLINE-DC": 8923
+ "matched": {
+  "NORTHBAY-FAB": {
+   "bps": 8284,
+   "consumedKwh": "525384",
+   "matchedKwh": "435269"
+  },
+  "HARBOR-OFFICE": {
+   "bps": 8088,
+   "consumedKwh": "68261",
+   "matchedKwh": "55215"
+  },
+  "CLOUDLINE-DC": {
+   "bps": 8923,
+   "consumedKwh": "355432",
+   "matchedKwh": "317154"
+  }
+ },
+ "gasTotal": "64569143",
+ "operatorSpentEth": "0.001542278702226912",
+ "gasPriceGwei": "0.001000016",
+ "verifiedAt": "2026-10-14T17:31:02.142Z",
+ "sourcify": {
+  "match": "exact_match",
+  "verifiedAt": "2026-10-14T17:31:10Z",
+  "url": "https://repo.sourcify.dev/11155111/0xcA60934442d09fc62F7CEd7B424a2939ea89D4d6"
+ },
+ "previous": {
+  "contract": "0x5Fd952504449Cf291FBFAe6CBe9daaa1CE5Ecf18",
+  "note": "v1, single issuer and single wallet; superseded 2026-10-15; record in deployments/archive/sepolia_v1.json"
+ }
 }

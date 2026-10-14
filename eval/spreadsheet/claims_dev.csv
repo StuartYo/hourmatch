@@ -1,0 +1,19 @@
+id,text,company,day_from,day_to,hour_from,hour_to,weekdays_only,claimed_pct,basis,re100,truth
+D01,Northbay Fab ran on 100% renewable electricity this week.,NORTHBAY-FAB,1,7,0,24,0,100,hourly,0,NOT_SUPPORTED
+D02,Renewable energy certificates purchased by Northbay Fab covered 100% of its electricity consumption this week.,NORTHBAY-FAB,1,7,0,24,0,100,volume,0,SUPPORTED
+D03,Northbay Fab matched 83% of its electricity with renewable energy hour by hour this week.,NORTHBAY-FAB,1,7,0,24,0,83,hourly,0,SUPPORTED
+D04,Northbay Fab matched 95% of its electricity with renewable energy hour by hour this week.,NORTHBAY-FAB,1,7,0,24,0,95,hourly,0,NOT_SUPPORTED
+D05,Northbay Fab was fully powered by renewables around the clock on 2026-10-08.,NORTHBAY-FAB,3,3,0,24,0,100,hourly,0,NOT_SUPPORTED
+D06,"Between 10:00 and 14:00 on 2026-10-07, every kWh used by Northbay Fab was renewable.",NORTHBAY-FAB,2,2,10,14,0,100,hourly,0,SUPPORTED
+D07,Northbay Fab's night shift (00:00 to 06:00) on 2026-10-09 ran on 100% solar and wind power.,NORTHBAY-FAB,4,4,0,6,0,100,hourly,0,NOT_SUPPORTED
+D08,Harbor Office used 100% renewable electricity during business hours on weekdays this week.,HARBOR-OFFICE,1,7,8,19,1,100,hourly,0,NOT_SUPPORTED
+D09,"Harbor Office is 100% renewable, every hour of every day, this week.",HARBOR-OFFICE,1,7,0,24,0,100,hourly,0,NOT_SUPPORTED
+D10,"All of Harbor Office's electricity this week was RE100-eligible renewable electricity, matched hour by hour.",HARBOR-OFFICE,1,7,0,24,0,100,hourly,1,NOT_SUPPORTED
+D11,Renewable certificates bought by Harbor Office equal 100% of its electricity consumption this week.,HARBOR-OFFICE,1,7,0,24,0,100,volume,0,SUPPORTED
+D12,Cloudline Data Center ran on 100% wind power on 2026-10-08.,CLOUDLINE-DC,3,3,0,24,0,100,hourly,0,NOT_SUPPORTED
+D13,Cloudline Data Center matched 90% of its load with renewable electricity on an hourly basis this week.,CLOUDLINE-DC,1,7,0,24,0,90,hourly,0,SUPPORTED
+D14,Cloudline Data Center was 24/7 carbon-free from 2026-10-10 to 2026-10-12.,CLOUDLINE-DC,5,7,0,24,0,100,hourly,0,NOT_SUPPORTED
+D15,"On 2026-10-11, Northbay Fab covered 81% of its electricity with same-hour renewable certificates.",NORTHBAY-FAB,6,6,0,24,0,81,hourly,0,SUPPORTED
+D16,"Cloudline Data Center's certificates cover 100% of its use this week, so the data center matched 100% of its electricity hour by hour.",CLOUDLINE-DC,1,7,0,24,0,100,hourly,0,NOT_SUPPORTED
+D17,"Harbor Office ran on 79% renewable power, hour by hour, on weekdays this week.",HARBOR-OFFICE,1,7,0,24,1,79,hourly,0,SUPPORTED
+D18,"Northbay Fab is RE100-compliant this week, with 83% of its electricity matched every hour by renewable certificates.",NORTHBAY-FAB,1,7,0,24,0,83,hourly,1,SUPPORTED

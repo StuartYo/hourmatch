@@ -4,12 +4,17 @@
 // (also stated in README.md and on the web page).
 import { Ledger, LedgerError, certificateId, hourIndexOf } from "./ledger.mjs";
 
-export const ISSUER = "issuer";
+// Roles (all fictional). On chain each one is its own wallet.
+export const OPERATOR = "operator"; // registry operator: issuer list, company wallets, metered use
+export const ISSUERS = [
+  { id: "issuer-a", name: "Issuer A (fictional certificate body)" },
+  { id: "issuer-b", name: "Issuer B (fictional wheeling-contract registrar)" },
+];
 
 export const GENERATORS = [
-  { id: 1, key: "solar", name: "Sunfield Solar (fictional)", owner: "sunfield", commissionYear: 2021, peakKw: 30000 },
-  { id: 2, key: "wind", name: "Strait Wind (fictional)", owner: "straitwind", commissionYear: 2024, peakKw: 40000 },
-  { id: 3, key: "hydro", name: "Old Creek Hydro (fictional)", owner: "oldcreek", commissionYear: 1998, peakKw: 3000 },
+  { id: 1, key: "solar", name: "Sunfield Solar (fictional)", owner: "sunfield", issuer: "issuer-a", commissionYear: 2021, peakKw: 30000 },
+  { id: 2, key: "wind", name: "Strait Wind (fictional)", owner: "straitwind", issuer: "issuer-b", commissionYear: 2024, peakKw: 40000 },
+  { id: 3, key: "hydro", name: "Old Creek Hydro (fictional)", owner: "oldcreek", issuer: "issuer-a", commissionYear: 1998, peakKw: 3000 },
 ];
 
 export const CONSUMERS = [
@@ -17,6 +22,9 @@ export const CONSUMERS = [
   { id: "HARBOR-OFFICE", name: "Harbor Office (fictional)", profile: "office, weekdays 08:00-19:00" },
   { id: "CLOUDLINE-DC", name: "Cloudline Data Center (fictional)", profile: "data center, flat load" },
 ];
+
+// Certificate volume bought / metered use, chosen for the demo (see step 3 in buildScenario)
+export const VOLUME_RATIO = { "NORTHBAY-FAB": 1.03, "HARBOR-OFFICE": 1.05, "CLOUDLINE-DC": 1.04 };
 
 // who receives what share of each plant's certificates (bilateral contracts, fictional)
 export const CONTRACTS = [
@@ -44,21 +52,32 @@ export function buildScenario(taipower, { withDoubleSale = true } = {}) {
   const hours = taipower.hours;
   const firstHour = hourIndexOf(hours[0].hour);
   const n = hours.length;
-  const ledger = new Ledger(ISSUER);
+  const ledger = new Ledger(OPERATOR);
   const log = [];
-  const ops = []; // every ledger write, replayed on the real contract by tests/chain
+  const ops = []; // every ledger write, replayed on the real contract by test/registry.test.cjs
 
-  // 1) plants and hourly certificates (one batch per day, like one tx per day on chain)
+  // 0) governance: two authorized issuers, each company bound to its own wallet
+  for (const is of ISSUERS) {
+    ledger.addIssuer(OPERATOR, is.id);
+    ops.push({ op: "addIssuer", sender: OPERATOR, args: [is.id] });
+  }
+  for (const c of CONSUMERS) {
+    ledger.registerConsumer(OPERATOR, c.id, c.id);
+    ops.push({ op: "registerConsumer", sender: OPERATOR, args: [c.id, c.id] });
+  }
+
+  // 1) plants and hourly certificates (one batch per plant per day, like one tx per day on chain).
+  //    Each plant is registered and issued by its own issuer; all of them share one retirement state.
   const generation = {};
   for (const g of GENERATORS) {
-    ledger.registerGenerator(ISSUER, g.id, g.name, g.owner, g.commissionYear);
-    ops.push({ op: "registerGenerator", sender: ISSUER, args: [g.id, g.name, g.owner, g.commissionYear] });
+    ledger.registerGenerator(g.issuer, g.id, g.name, g.owner, g.commissionYear);
+    ops.push({ op: "registerGenerator", sender: g.issuer, args: [g.id, g.name, g.owner, g.commissionYear] });
     const s = shape(hours, g.key);
     generation[g.id] = s.map((x) => Math.round(x * g.peakKw));
     for (let d = 0; d < n; d += 24) {
       const day = generation[g.id].slice(d, d + 24);
-      ledger.issueBatch(ISSUER, g.id, firstHour + BigInt(d), day);
-      ops.push({ op: "issueBatch", sender: ISSUER, args: [g.id, firstHour + BigInt(d), day] });
+      ledger.issueBatch(g.issuer, g.id, firstHour + BigInt(d), day);
+      ops.push({ op: "issueBatch", sender: g.issuer, args: [g.id, firstHour + BigInt(d), day] });
     }
   }
 
@@ -76,20 +95,22 @@ export function buildScenario(taipower, { withDoubleSale = true } = {}) {
     });
   }
 
-  // 3) metered consumption (fictional profiles). Loads are sized so that each buyer's certificate
-  //    VOLUME covers a bit more than 100% of its use: "100% renewable" on an annual-style tally.
+  // 3) metered consumption (fictional profiles). DESIGNED FOR THE DEMO: loads are sized so that each
+  //    buyer's certificate VOLUME is a bit more than 100% of its use (VOLUME_RATIO), so that a
+  //    "100% renewable" claim holds on paper. The hour-by-hour share is whatever the real Taipower
+  //    curves then produce; it is not tuned. The web page states this.
   const totalBought = (buyer) =>
     Object.values(bought[buyer] ?? {}).reduce((s, arr) => s + arr.reduce((a, b) => a + b, 0), 0);
   // Office and data center are sized the same way (105% and 104% of use on paper).
-  const fabFlat = Math.floor(totalBought("NORTHBAY-FAB") / n / 1.03);
+  const fabFlat = Math.floor(totalBought("NORTHBAY-FAB") / n / VOLUME_RATIO["NORTHBAY-FAB"]);
   const officeShape = hours.map((h) => {
     const { dow, hour } = weekdayAndHour(h.hour);
     const weekday = dow >= 1 && dow <= 5;
     return weekday && hour >= 8 && hour < 19 ? 1 : 0.2;
   });
-  const officeUnit = totalBought("HARBOR-OFFICE") / 1.05 / officeShape.reduce((a, b) => a + b, 0);
+  const officeUnit = totalBought("HARBOR-OFFICE") / VOLUME_RATIO["HARBOR-OFFICE"] / officeShape.reduce((a, b) => a + b, 0);
   const dcVar = hours.map((_, i) => 1 + (((i * 37) % 5) - 2) * 0.02);
-  const dcUnit = totalBought("CLOUDLINE-DC") / 1.04 / dcVar.reduce((a, b) => a + b, 0);
+  const dcUnit = totalBought("CLOUDLINE-DC") / VOLUME_RATIO["CLOUDLINE-DC"] / dcVar.reduce((a, b) => a + b, 0);
   const consumption = {
     "NORTHBAY-FAB": hours.map(() => fabFlat),
     "HARBOR-OFFICE": officeShape.map((x) => Math.round(x * officeUnit)),
@@ -98,8 +119,8 @@ export function buildScenario(taipower, { withDoubleSale = true } = {}) {
   for (const c of CONSUMERS) {
     for (let d = 0; d < n; d += 24) {
       const day = consumption[c.id].slice(d, d + 24);
-      ledger.recordConsumption(ISSUER, c.id, firstHour + BigInt(d), day);
-      ops.push({ op: "recordConsumption", sender: ISSUER, args: [c.id, firstHour + BigInt(d), day] });
+      ledger.recordConsumption(OPERATOR, c.id, firstHour + BigInt(d), day);
+      ops.push({ op: "recordConsumption", sender: OPERATOR, args: [c.id, firstHour + BigInt(d), day] });
     }
   }
 
@@ -140,5 +161,5 @@ export function buildScenario(taipower, { withDoubleSale = true } = {}) {
     }
   }
 
-  return { ledger, firstHour, n, hours, generation, bought, consumption, log, ops, totalBought };
+  return { ledger, firstHour, n, hours, generation, bought, consumption, log, ops, totalBought, generators: GENERATORS, consumers: CONSUMERS, source: "demo" };
 }

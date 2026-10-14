@@ -1,0 +1,9 @@
+id,text,company,day_from,day_to,hour_from,hour_to,weekdays_only,claimed_pct,basis,re100,truth
+H01,Northbay Fab: 100% green electricity for the whole week.,NORTHBAY-FAB,1,7,0,24,0,100,hourly,0,NOT_SUPPORTED
+H02,Northbay Fab's renewable certificate purchases this week totaled 100% of what the plant consumed.,NORTHBAY-FAB,1,7,0,24,0,100,volume,0,SUPPORTED
+H03,Cloudline Data Center ran on renewable power every single hour on 2026-09-23.,CLOUDLINE-DC,2,2,0,24,0,100,hourly,0,SUPPORTED
+H04,All of Harbor Office's weekday office-hours electricity this week came from renewables.,HARBOR-OFFICE,1,7,8,19,1,100,hourly,0,NOT_SUPPORTED
+H05,Harbor Office meets RE100 this week: certificates it bought cover 100% of its consumption.,HARBOR-OFFICE,1,7,0,24,0,100,volume,1,NOT_SUPPORTED
+H06,"From 2026-09-22 to 2026-09-24, Northbay Fab matched 86% of its electricity hour by hour.",NORTHBAY-FAB,1,3,0,24,0,86,hourly,0,SUPPORTED
+H07,"On 2026-09-26, Northbay Fab matched 48% of its electricity hour by hour.",NORTHBAY-FAB,5,5,0,24,0,48,hourly,0,NOT_SUPPORTED
+H08,Cloudline Data Center: 100% of this week's consumption was covered by renewable certificate purchases.,CLOUDLINE-DC,1,7,0,24,0,100,volume,0,SUPPORTED

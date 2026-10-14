@@ -1,0 +1,262 @@
+﻿[
+    {
+        "set":  "dev",
+        "id":  "D01",
+        "use":  3677688,
+        "hourly":  8303,
+        "volume":  10300,
+        "share":  8303,
+        "verdict":  "NOT_SUPPORTED",
+        "agrees":  "TRUE"
+    },
+    {
+        "set":  "dev",
+        "id":  "D02",
+        "use":  3677688,
+        "hourly":  8303,
+        "volume":  10300,
+        "share":  10300,
+        "verdict":  "SUPPORTED",
+        "agrees":  "TRUE"
+    },
+    {
+        "set":  "dev",
+        "id":  "D03",
+        "use":  3677688,
+        "hourly":  8303,
+        "volume":  10300,
+        "share":  8303,
+        "verdict":  "SUPPORTED",
+        "agrees":  "TRUE"
+    },
+    {
+        "set":  "dev",
+        "id":  "D04",
+        "use":  3677688,
+        "hourly":  8303,
+        "volume":  10300,
+        "share":  8303,
+        "verdict":  "NOT_SUPPORTED",
+        "agrees":  "TRUE"
+    },
+    {
+        "set":  "dev",
+        "id":  "D05",
+        "use":  525384,
+        "hourly":  8284,
+        "volume":  9563,
+        "share":  8284,
+        "verdict":  "NOT_SUPPORTED",
+        "agrees":  "TRUE"
+    },
+    {
+        "set":  "dev",
+        "id":  "D06",
+        "use":  87564,
+        "hourly":  10000,
+        "volume":  18645,
+        "share":  10000,
+        "verdict":  "SUPPORTED",
+        "agrees":  "TRUE"
+    },
+    {
+        "set":  "dev",
+        "id":  "D07",
+        "use":  131346,
+        "hourly":  6538,
+        "volume":  6538,
+        "share":  6538,
+        "verdict":  "NOT_SUPPORTED",
+        "agrees":  "TRUE"
+    },
+    {
+        "set":  "dev",
+        "id":  "D08",
+        "use":  276045,
+        "hourly":  7470,
+        "volume":  7565,
+        "share":  7470,
+        "verdict":  "NOT_SUPPORTED",
+        "agrees":  "TRUE"
+    },
+    {
+        "set":  "dev",
+        "id":  "D09",
+        "use":  389497,
+        "hourly":  8193,
+        "volume":  10499,
+        "share":  8193,
+        "verdict":  "NOT_SUPPORTED",
+        "agrees":  "TRUE"
+    },
+    {
+        "set":  "dev",
+        "id":  "D10",
+        "use":  389497,
+        "hourly":  8193,
+        "volume":  10499,
+        "share":  5858,
+        "verdict":  "NOT_SUPPORTED",
+        "agrees":  "TRUE"
+    },
+    {
+        "set":  "dev",
+        "id":  "D11",
+        "use":  389497,
+        "hourly":  8193,
+        "volume":  10499,
+        "share":  10499,
+        "verdict":  "SUPPORTED",
+        "agrees":  "TRUE"
+    },
+    {
+        "set":  "dev",
+        "id":  "D12",
+        "use":  355432,
+        "hourly":  8923,
+        "volume":  9720,
+        "share":  8923,
+        "verdict":  "NOT_SUPPORTED",
+        "agrees":  "TRUE"
+    },
+    {
+        "set":  "dev",
+        "id":  "D13",
+        "use":  2492179,
+        "hourly":  9055,
+        "volume":  10400,
+        "share":  9055,
+        "verdict":  "SUPPORTED",
+        "agrees":  "TRUE"
+    },
+    {
+        "set":  "dev",
+        "id":  "D14",
+        "use":  1068670,
+        "hourly":  8328,
+        "volume":  8954,
+        "share":  8328,
+        "verdict":  "NOT_SUPPORTED",
+        "agrees":  "TRUE"
+    },
+    {
+        "set":  "dev",
+        "id":  "D15",
+        "use":  525384,
+        "hourly":  8148,
+        "volume":  10244,
+        "share":  8148,
+        "verdict":  "SUPPORTED",
+        "agrees":  "TRUE"
+    },
+    {
+        "set":  "dev",
+        "id":  "D16",
+        "use":  2492179,
+        "hourly":  9055,
+        "volume":  10400,
+        "share":  9055,
+        "verdict":  "NOT_SUPPORTED",
+        "agrees":  "TRUE"
+    },
+    {
+        "set":  "dev",
+        "id":  "D17",
+        "use":  341305,
+        "hourly":  7938,
+        "volume":  8491,
+        "share":  7938,
+        "verdict":  "SUPPORTED",
+        "agrees":  "TRUE"
+    },
+    {
+        "set":  "dev",
+        "id":  "D18",
+        "use":  3677688,
+        "hourly":  8303,
+        "volume":  10300,
+        "share":  8303,
+        "verdict":  "SUPPORTED",
+        "agrees":  "TRUE"
+    },
+    {
+        "set":  "holdout",
+        "id":  "H01",
+        "use":  2177280,
+        "hourly":  6544,
+        "volume":  10300,
+        "share":  6544,
+        "verdict":  "NOT_SUPPORTED",
+        "agrees":  "TRUE"
+    },
+    {
+        "set":  "holdout",
+        "id":  "H02",
+        "use":  2177280,
+        "hourly":  6544,
+        "volume":  10300,
+        "share":  10300,
+        "verdict":  "SUPPORTED",
+        "agrees":  "TRUE"
+    },
+    {
+        "set":  "holdout",
+        "id":  "H03",
+        "use":  142592,
+        "hourly":  10000,
+        "volume":  18200,
+        "share":  10000,
+        "verdict":  "SUPPORTED",
+        "agrees":  "TRUE"
+    },
+    {
+        "set":  "holdout",
+        "id":  "H04",
+        "use":  286935,
+        "hourly":  7165,
+        "volume":  7165,
+        "share":  7165,
+        "verdict":  "NOT_SUPPORTED",
+        "agrees":  "TRUE"
+    },
+    {
+        "set":  "holdout",
+        "id":  "H05",
+        "use":  404794,
+        "hourly":  7887,
+        "volume":  10501,
+        "share":  6754,
+        "verdict":  "NOT_SUPPORTED",
+        "agrees":  "TRUE"
+    },
+    {
+        "set":  "holdout",
+        "id":  "H06",
+        "use":  933120,
+        "hourly":  8671,
+        "volume":  13969,
+        "share":  8671,
+        "verdict":  "SUPPORTED",
+        "agrees":  "TRUE"
+    },
+    {
+        "set":  "holdout",
+        "id":  "H07",
+        "use":  311040,
+        "hourly":  4006,
+        "volume":  5935,
+        "share":  4006,
+        "verdict":  "NOT_SUPPORTED",
+        "agrees":  "TRUE"
+    },
+    {
+        "set":  "holdout",
+        "id":  "H08",
+        "use":  997315,
+        "hourly":  6391,
+        "volume":  10399,
+        "share":  10399,
+        "verdict":  "SUPPORTED",
+        "agrees":  "TRUE"
+    }
+]

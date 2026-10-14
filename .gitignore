@@ -9,3 +9,4 @@ deployments/hardhat.json
 
 .vercel
 eval/*.log
+.claude/

@@ -6,8 +6,11 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "test": "node --test tests/ && npx hardhat test",
-    "compile": "npx hardhat compile"
+    "test": "node --test \"tests/*.test.mjs\" && npx hardhat test",
+    "compile": "npx hardhat compile",
+    "build": "node scripts/build_web.mjs",
+    "eval:hand": "python -I eval/handcalc.py",
+    "eval:sheet": "node eval/spreadsheet_baseline.mjs && python -I eval/make_xlsx.py"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-ethers": "^3.1.3",

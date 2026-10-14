@@ -1,6 +1,7 @@
 // In-memory mirror of contracts/HourlyCertificateRegistry.sol.
-// Same rules, same integer arithmetic. tests/consistency.test.mjs replays one scenario
-// through both and asserts identical state, so the web demo can run without a chain.
+// Same rules, same integer arithmetic, same error names. test/registry.test.cjs replays the whole
+// demo week through both and asserts identical results, so the web demo can run without a chain.
+// Senders are plain names here ("operator", "issuer-a", "NORTHBAY-FAB"); on chain they are wallets.
 
 export const HOUR = 3600;
 
@@ -35,9 +36,11 @@ export class LedgerError extends Error {
 const k = (...parts) => parts.map(String).join("|");
 
 export class Ledger {
-  constructor(issuer = "issuer") {
-    this.issuer = issuer;
-    this.generators = new Map(); // id -> {name, owner, commissionYear}
+  constructor(operator = "operator") {
+    this.operator = operator;
+    this.issuers = new Set();
+    this.consumerWallet = new Map(); // consumer id -> sender name
+    this.generators = new Map(); // id -> {name, owner, issuer, commissionYear}
     this.balance = new Map(); // id|holder -> bigint
     this.issued = new Map(); // id -> bigint
     this.retired = new Map(); // id -> bigint
@@ -50,40 +53,64 @@ export class Ledger {
   #get(map, key) {
     return map.get(key) ?? 0n;
   }
+  #onlyOperator(sender) {
+    if (sender !== this.operator) throw new LedgerError("NotOperator");
+  }
   #onlyIssuer(sender) {
-    if (sender !== this.issuer) throw new LedgerError("NotIssuer");
+    if (!this.issuers.has(sender)) throw new LedgerError("NotIssuer");
+  }
+
+  addIssuer(sender, issuer) {
+    this.#onlyOperator(sender);
+    this.issuers.add(issuer);
+    this.events.push({ type: "IssuerAdded", issuer });
+  }
+
+  removeIssuer(sender, issuer) {
+    this.#onlyOperator(sender);
+    this.issuers.delete(issuer);
+    this.events.push({ type: "IssuerRemoved", issuer });
+  }
+
+  registerConsumer(sender, consumer, wallet) {
+    this.#onlyOperator(sender);
+    if (this.consumerWallet.has(consumer)) throw new LedgerError("ConsumerExists");
+    this.consumerWallet.set(consumer, wallet);
+    this.events.push({ type: "ConsumerRegistered", consumer, wallet });
   }
 
   registerGenerator(sender, generatorId, name, owner, commissionYear) {
     this.#onlyIssuer(sender);
     if (this.generators.has(generatorId)) throw new LedgerError("GeneratorExists");
-    this.generators.set(generatorId, { name, owner, commissionYear });
-    this.events.push({ type: "GeneratorRegistered", generatorId, name, owner, commissionYear });
+    this.generators.set(generatorId, { name, owner, issuer: sender, commissionYear });
+    this.events.push({ type: "GeneratorRegistered", generatorId, name, owner, issuer: sender, commissionYear });
   }
 
   issueBatch(sender, generatorId, firstHour, kwh) {
     this.#onlyIssuer(sender);
     const g = this.generators.get(generatorId);
     if (!g) throw new LedgerError("UnknownGenerator");
-    kwh.forEach((v, i) => {
-      const amount = BigInt(v);
-      if (amount === 0n) return;
-      const id = certificateId(generatorId, BigInt(firstHour) + BigInt(i));
-      this.issued.set(id, this.#get(this.issued, id) + amount);
+    if (g.issuer !== sender) throw new LedgerError("NotGeneratorIssuer");
+    // check every hour first so a failed batch changes nothing (a reverted tx changes nothing either)
+    const ids = kwh.map((v, i) => [certificateId(generatorId, BigInt(firstHour) + BigInt(i)), BigInt(v)]);
+    for (const [id, amount] of ids) if (amount !== 0n && this.#get(this.issued, id) !== 0n) throw new LedgerError("AlreadyIssued", String(id));
+    for (const [id, amount] of ids) {
+      if (amount === 0n) continue;
+      this.issued.set(id, amount);
       const bk = k(id, g.owner);
       this.balance.set(bk, this.#get(this.balance, bk) + amount);
-    });
+    }
     this.events.push({ type: "IssuedBatch", generatorId, firstHour: BigInt(firstHour), hours: kwh.length });
   }
 
   recordConsumption(sender, consumer, firstHour, kwh) {
-    this.#onlyIssuer(sender);
+    this.#onlyOperator(sender);
+    if (!this.consumerWallet.has(consumer)) throw new LedgerError("UnknownConsumer");
     kwh.forEach((v, i) => {
-      const h = BigInt(firstHour) + BigInt(i);
-      const key = k(consumer, h);
+      const key = k(consumer, BigInt(firstHour) + BigInt(i));
       if (BigInt(v) < this.#get(this.matched, key)) throw new LedgerError("ExceedsUnmatchedConsumption");
-      this.consumption.set(key, BigInt(v));
     });
+    kwh.forEach((v, i) => this.consumption.set(k(consumer, BigInt(firstHour) + BigInt(i)), BigInt(v)));
     this.events.push({ type: "ConsumptionRecorded", consumer, firstHour: BigInt(firstHour), hours: kwh.length });
   }
 
@@ -91,8 +118,11 @@ export class Ledger {
     return this.#get(this.balance, k(id, holder));
   }
 
+  // Only the plant account can transfer: each certificate changes hands at most once (T-REC "transfer once").
   transfer(sender, id, to, kwh) {
     const amount = BigInt(kwh);
+    const g = this.generators.get(generatorOf(id));
+    if (!g || g.owner !== sender) throw new LedgerError("OnlyOneTransfer", String(id));
     const fk = k(id, sender);
     const have = this.#get(this.balance, fk);
     if (have < amount) throw new LedgerError("InsufficientBalance", `${id} have ${have} want ${amount}`);
@@ -103,6 +133,7 @@ export class Ledger {
   }
 
   retire(sender, id, kwh, consumer, consumptionHour) {
+    if (this.consumerWallet.get(consumer) !== sender) throw new LedgerError("NotConsumerWallet", consumer);
     const amount = BigInt(kwh);
     const h = hourOf(id);
     if (h !== BigInt(consumptionHour)) throw new LedgerError("HourMismatch", `${h} vs ${consumptionHour}`);
@@ -130,7 +161,8 @@ export class Ledger {
     return { bps, consumedKwh, matchedKwh };
   }
 
-  anchorClaim(claimHash, consumer, fromHour, toHour, claimedBps) {
+  anchorClaim(sender, claimHash, consumer, fromHour, toHour, claimedBps) {
+    if (this.consumerWallet.get(consumer) !== sender) throw new LedgerError("NotConsumerWallet", consumer);
     if (this.claims.has(claimHash)) throw new LedgerError("AlreadyAnchored");
     const { bps } = this.matchedBps(consumer, fromHour, toHour);
     this.claims.set(claimHash, { consumer, fromHour: BigInt(fromHour), toHour: BigInt(toHour), claimedBps, matchedBps: bps });

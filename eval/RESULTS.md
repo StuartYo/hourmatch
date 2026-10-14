@@ -49,3 +49,36 @@ Model: `aisingapore/Qwen-SEA-LION-v4-32B-IT` (PublicAI free inference, temperatu
 | H06 | SUPPORTED | 86.71 | SUPPORTED (86.71) | NOT_SUPPORTED (85.5) |
 | H07 | NOT_SUPPORTED | 40.06 | NOT_SUPPORTED (40.06) | SUPPORTED (48.5) |
 | H08 | SUPPORTED | 103.99 | SUPPORTED (103.99) | NOT_SUPPORTED (100) |
+
+## Stronger baselines added after review (no model was re-run)
+
+**Spreadsheet.** The same hourly data in a spreadsheet, the claim fields read by a person, and SUMPRODUCT formulas
+(see SPREADSHEET.md and spreadsheet_baseline.xlsx; Excel recalculated the file and agreed on every row, results_spreadsheet_excel.json).
+Result: dev 18 / 18, holdout 8 / 8.
+
+**Hand calculation.** HANDCALC.md works out three claims hour by hour. It is written by handcalc.py, which imports no HourMatch code.
+tests/eval.test.mjs checks that the checker gives the same totals.
+
+| id | hour by hour | volume | verdict |
+|---|---|---|---|
+| HC1 | 65.38% | 65.38% | NOT_SUPPORTED |
+| HC2 | 74.66% | 75.21% | NOT_SUPPORTED |
+| HC3 | 97.58% | 103.15% | SUPPORTED |
+
+**Rule change check.** After review the RE100 rule was corrected to the March 2025 text (15-year limit plus a 15% allowance for older plants).
+The truth labels were recomputed with the corrected rule and none changed; the cached model parses rescore to the same verdicts (tests/eval.test.mjs).
+The model-alone prompt used the stricter rule without the 15% allowance; on these claims both rules give the same verdicts.
+
+## What this evaluation measures and what it does not
+
+- It measures whether a language model given the hourly table and the rules gets the verdict and the share right, compared with
+  letting code do the arithmetic. It does: the model alone is unreliable on 168-row arithmetic.
+- The spreadsheet ties HourMatch on every claim once a person has read the claim into fields. The arithmetic is not the hard part.
+  What a spreadsheet does not have is a shared state: it trusts its certificate column, and nothing stops the same certificate
+  from appearing in two companies' sheets. That part is tested by the contract tests, not by this evaluation.
+- Truth labels use the same matching rule as HourMatch by definition. The hand calculation and the spreadsheet check the
+  arithmetic independently; they do not check whether the rule is the right policy.
+- All companies are fictional, the loads were designed so that certificate volume is a little over 100% of use, and the claims
+  were written by the author. Nothing here is measured on real company data.
+- The model results come from one run on 2026-10-14 and were not repeated. Typed sentences on the web page are read by keyword
+  rules, which are covered only by unit tests (tests/ruleparse.test.mjs).

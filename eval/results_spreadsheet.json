@@ -1,0 +1,251 @@
+{
+ "note": "Spreadsheet baseline: same hourly data, claim fields read by a person (gold), SUMPRODUCT formulas.",
+ "sets": {
+  "dev": {
+   "correct": 18,
+   "n": 18,
+   "rows": [
+    {
+     "id": "D01",
+     "truth": "NOT_SUPPORTED",
+     "use": 3677688,
+     "hourly_bps": 8303,
+     "volume_bps": 10300,
+     "share_bps": 8303,
+     "verdict": "NOT_SUPPORTED"
+    },
+    {
+     "id": "D02",
+     "truth": "SUPPORTED",
+     "use": 3677688,
+     "hourly_bps": 8303,
+     "volume_bps": 10300,
+     "share_bps": 10300,
+     "verdict": "SUPPORTED"
+    },
+    {
+     "id": "D03",
+     "truth": "SUPPORTED",
+     "use": 3677688,
+     "hourly_bps": 8303,
+     "volume_bps": 10300,
+     "share_bps": 8303,
+     "verdict": "SUPPORTED"
+    },
+    {
+     "id": "D04",
+     "truth": "NOT_SUPPORTED",
+     "use": 3677688,
+     "hourly_bps": 8303,
+     "volume_bps": 10300,
+     "share_bps": 8303,
+     "verdict": "NOT_SUPPORTED"
+    },
+    {
+     "id": "D05",
+     "truth": "NOT_SUPPORTED",
+     "use": 525384,
+     "hourly_bps": 8284,
+     "volume_bps": 9563,
+     "share_bps": 8284,
+     "verdict": "NOT_SUPPORTED"
+    },
+    {
+     "id": "D06",
+     "truth": "SUPPORTED",
+     "use": 87564,
+     "hourly_bps": 10000,
+     "volume_bps": 18645,
+     "share_bps": 10000,
+     "verdict": "SUPPORTED"
+    },
+    {
+     "id": "D07",
+     "truth": "NOT_SUPPORTED",
+     "use": 131346,
+     "hourly_bps": 6538,
+     "volume_bps": 6538,
+     "share_bps": 6538,
+     "verdict": "NOT_SUPPORTED"
+    },
+    {
+     "id": "D08",
+     "truth": "NOT_SUPPORTED",
+     "use": 276045,
+     "hourly_bps": 7470,
+     "volume_bps": 7565,
+     "share_bps": 7470,
+     "verdict": "NOT_SUPPORTED"
+    },
+    {
+     "id": "D09",
+     "truth": "NOT_SUPPORTED",
+     "use": 389497,
+     "hourly_bps": 8193,
+     "volume_bps": 10499,
+     "share_bps": 8193,
+     "verdict": "NOT_SUPPORTED"
+    },
+    {
+     "id": "D10",
+     "truth": "NOT_SUPPORTED",
+     "use": 389497,
+     "hourly_bps": 8193,
+     "volume_bps": 10499,
+     "share_bps": 5858,
+     "verdict": "NOT_SUPPORTED"
+    },
+    {
+     "id": "D11",
+     "truth": "SUPPORTED",
+     "use": 389497,
+     "hourly_bps": 8193,
+     "volume_bps": 10499,
+     "share_bps": 10499,
+     "verdict": "SUPPORTED"
+    },
+    {
+     "id": "D12",
+     "truth": "NOT_SUPPORTED",
+     "use": 355432,
+     "hourly_bps": 8923,
+     "volume_bps": 9720,
+     "share_bps": 8923,
+     "verdict": "NOT_SUPPORTED"
+    },
+    {
+     "id": "D13",
+     "truth": "SUPPORTED",
+     "use": 2492179,
+     "hourly_bps": 9055,
+     "volume_bps": 10400,
+     "share_bps": 9055,
+     "verdict": "SUPPORTED"
+    },
+    {
+     "id": "D14",
+     "truth": "NOT_SUPPORTED",
+     "use": 1068670,
+     "hourly_bps": 8328,
+     "volume_bps": 8954,
+     "share_bps": 8328,
+     "verdict": "NOT_SUPPORTED"
+    },
+    {
+     "id": "D15",
+     "truth": "SUPPORTED",
+     "use": 525384,
+     "hourly_bps": 8148,
+     "volume_bps": 10244,
+     "share_bps": 8148,
+     "verdict": "SUPPORTED"
+    },
+    {
+     "id": "D16",
+     "truth": "NOT_SUPPORTED",
+     "use": 2492179,
+     "hourly_bps": 9055,
+     "volume_bps": 10400,
+     "share_bps": 9055,
+     "verdict": "NOT_SUPPORTED"
+    },
+    {
+     "id": "D17",
+     "truth": "SUPPORTED",
+     "use": 341305,
+     "hourly_bps": 7938,
+     "volume_bps": 8491,
+     "share_bps": 7938,
+     "verdict": "SUPPORTED"
+    },
+    {
+     "id": "D18",
+     "truth": "SUPPORTED",
+     "use": 3677688,
+     "hourly_bps": 8303,
+     "volume_bps": 10300,
+     "share_bps": 8303,
+     "verdict": "SUPPORTED"
+    }
+   ]
+  },
+  "holdout": {
+   "correct": 8,
+   "n": 8,
+   "rows": [
+    {
+     "id": "H01",
+     "truth": "NOT_SUPPORTED",
+     "use": 2177280,
+     "hourly_bps": 6544,
+     "volume_bps": 10300,
+     "share_bps": 6544,
+     "verdict": "NOT_SUPPORTED"
+    },
+    {
+     "id": "H02",
+     "truth": "SUPPORTED",
+     "use": 2177280,
+     "hourly_bps": 6544,
+     "volume_bps": 10300,
+     "share_bps": 10300,
+     "verdict": "SUPPORTED"
+    },
+    {
+     "id": "H03",
+     "truth": "SUPPORTED",
+     "use": 142592,
+     "hourly_bps": 10000,
+     "volume_bps": 18200,
+     "share_bps": 10000,
+     "verdict": "SUPPORTED"
+    },
+    {
+     "id": "H04",
+     "truth": "NOT_SUPPORTED",
+     "use": 286935,
+     "hourly_bps": 7165,
+     "volume_bps": 7165,
+     "share_bps": 7165,
+     "verdict": "NOT_SUPPORTED"
+    },
+    {
+     "id": "H05",
+     "truth": "NOT_SUPPORTED",
+     "use": 404794,
+     "hourly_bps": 7887,
+     "volume_bps": 10501,
+     "share_bps": 6754,
+     "verdict": "NOT_SUPPORTED"
+    },
+    {
+     "id": "H06",
+     "truth": "SUPPORTED",
+     "use": 933120,
+     "hourly_bps": 8671,
+     "volume_bps": 13969,
+     "share_bps": 8671,
+     "verdict": "SUPPORTED"
+    },
+    {
+     "id": "H07",
+     "truth": "NOT_SUPPORTED",
+     "use": 311040,
+     "hourly_bps": 4006,
+     "volume_bps": 5935,
+     "share_bps": 4006,
+     "verdict": "NOT_SUPPORTED"
+    },
+    {
+     "id": "H08",
+     "truth": "SUPPORTED",
+     "use": 997315,
+     "hourly_bps": 6391,
+     "volume_bps": 10399,
+     "share_bps": 10399,
+     "verdict": "SUPPORTED"
+    }
+   ]
+  }
+ }
+}
