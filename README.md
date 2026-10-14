@@ -57,7 +57,7 @@ node scripts/build_web.mjs       # copy engine and data into public/
 python -m http.server 5178 -d public
 ```
 
-Evaluation (needs `LLM_API_KEY` or `APERTUS_API_KEY` in your environment; default endpoint is PublicAI's free inference, model `aisingapore/Qwen-SEA-LION-v4-32B-IT`):
+Evaluation (live model calls are off by default; set a dedicated `LLM_API_KEY` and `HOURMATCH_LLM_LIVE=1`. Default endpoint PublicAI, model `aisingapore/Qwen-SEA-LION-v4-32B-IT`. Stored results are in `eval/`):
 
 ```bash
 node eval/run_eval.mjs dev both
