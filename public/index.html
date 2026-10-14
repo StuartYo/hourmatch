@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HourMatch</title>
+<meta name="description" content="Check a green-electricity claim hour by hour against a shared certificate ledger.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f5f0; --panel:#ffffff; --ink:#15171a; --muted:#5d636b; --line:#dedbd2;
+  --sun:#e8a20c; --wind:#2f7dd1; --hydro:#5b8f6a; --use:#c9c5b9; --bad:#c2410c; --good:#15803d; --accent:#15171a;
+  --night:#eceae3;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#111315; --panel:#191c1f; --ink:#ecebe6; --muted:#9aa1a9; --line:#2c3035;
+    --use:#4a4f56; --night:#16191c; --accent:#ecebe6;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#111315; --panel:#191c1f; --ink:#ecebe6; --muted:#9aa1a9; --line:#2c3035;
+  --use:#4a4f56; --night:#16191c; --accent:#ecebe6;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "IBM Plex Sans",system-ui,sans-serif}
+.wrap{max-width:1120px;margin:0 auto;padding:28px 16px 80px}
+header{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 18px;margin-bottom:6px}
+h1{font-size:30px;letter-spacing:-.02em;margin:0}
+.tag{font:600 12px "IBM Plex Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.lede{font-size:19px;max-width:780px;margin:8px 0 14px}
+.note{border:1px dashed var(--line);border-radius:10px;padding:10px 14px;color:var(--muted);font-size:14px;margin-bottom:22px}
+.grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:18px}
+@media (max-width:860px){.grid{grid-template-columns:1fr}}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px}
+h2{font-size:15px;margin:0 0 10px;font-weight:600}
+h2 .n{font-family:"IBM Plex Mono",monospace;color:var(--muted);margin-right:8px}
+textarea{width:100%;min-height:92px;resize:vertical;border:1px solid var(--line);border-radius:10px;padding:10px 12px;font:inherit;background:var(--bg);color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 12px}
+.chip{border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;padding:5px 11px;font:13px inherit;cursor:pointer;text-align:left}
+.chip:hover{border-color:var(--ink)}
+button.go{background:var(--accent);color:var(--bg);border:0;border-radius:10px;padding:10px 16px;font:600 15px inherit;cursor:pointer}
+button.go:disabled{opacity:.5;cursor:wait}
+.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 12px;margin-top:14px;font-size:14px}
+.fields label{display:flex;flex-direction:column;gap:3px;color:var(--muted)}
+.fields select,.fields input{font:14px "IBM Plex Mono",monospace;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+.src{font:12px "IBM Plex Mono",monospace;color:var(--muted);margin-top:8px}
+.big{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:14px}
+.stat{border:1px solid var(--line);border-radius:12px;padding:12px}
+.stat .v{font:600 30px "IBM Plex Mono",monospace;letter-spacing:-.02em}
+.stat .k{font-size:13px;color:var(--muted)}
+.verdict{display:flex;gap:12px;align-items:flex-start;border-radius:12px;padding:12px 14px;margin-bottom:12px;border:1px solid var(--line)}
+.verdict.bad{border-color:var(--bad)} .verdict.good{border-color:var(--good)}
+.verdict b{font:600 14px "IBM Plex Mono",monospace;letter-spacing:.04em}
+.verdict.bad b{color:var(--bad)} .verdict.good b{color:var(--good)}
+.rewrite{font-size:14px;background:var(--bg);border-radius:10px;padding:10px 12px;margin-top:8px}
+svg{display:block;width:100%;height:auto}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--muted);margin:6px 0 0}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+td,th{padding:7px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-weight:600;color:var(--muted);font-size:13px}
+td.num{font-family:"IBM Plex Mono",monospace}
+.section{margin-top:18px}
+.mono{font-family:"IBM Plex Mono",monospace;font-size:13px;word-break:break-all}
+.muted{color:var(--muted)}
+.why{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:860px){.why{grid-template-columns:1fr}.big{grid-template-columns:1fr 1fr}}
+.why div{border-top:2px solid var(--ink);padding-top:8px;font-size:14px}
+.why b{display:block;margin-bottom:4px;font-size:15px}
+footer{margin-top:28px;font-size:13px;color:var(--muted)}
+a{color:inherit}
+.theme{margin-left:auto;background:transparent;border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:4px 10px;font:13px inherit;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>HourMatch</h1>
+    <span class="tag">Renewable Energy &amp; Energy Trading track</span>
+    <button class="theme" id="theme" type="button">Theme</button>
+  </header>
+  <p class="lede">A factory can buy enough solar certificates to say "100% renewable" while running on gas every night. HourMatch issues renewable certificates per plant per hour on a shared ledger, lets each one be retired once and only against the same hour's metered use, then checks any green-power claim against that ledger.</p>
+  <div class="note"><b>Demo data.</b> Every company, power plant and contract here is fictional. The hourly solar, wind and hydro output curves are real: Taiwan Power Company open data, 6 to 12 October 2026 (data.gov.tw dataset 8931), scaled down to plant size.</div>
+
+  <div class="grid">
+    <div class="panel">
+      <h2><span class="n">1</span>Paste a green-power claim</h2>
+      <textarea id="claim" maxlength="400">Northbay Fab ran on 100% renewable electricity this week.</textarea>
+      <div class="chips" id="chips"></div>
+      <button class="go" id="go" type="button">Check this claim</button>
+      <div class="section">
+        <h2><span class="n">2</span>What the claim says, as checkable fields</h2>
+        <div class="fields" id="fields"></div>
+        <div class="src" id="parseSrc"></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2><span class="n">3</span>Ledger check, hour by hour</h2>
+      <div id="verdict"></div>
+      <div class="big" id="big"></div>
+      <div id="chart"></div>
+      <div class="legend">
+        <span><i style="background:var(--use)"></i>metered use</span>
+        <span><i style="background:var(--sun)"></i>matched by solar</span>
+        <span><i style="background:var(--wind)"></i>matched by wind</span>
+        <span><i style="background:var(--hydro)"></i>matched by hydro</span>
+        <span><i style="background:var(--night);border:1px solid var(--line)"></i>outside the claim</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel section">
+    <h2>What the shared ledger refused this week</h2>
+    <div id="refusals"></div>
+  </div>
+
+  <div class="panel section">
+    <h2>Why not just ask a language model?</h2>
+    <div id="evalBox"></div>
+  </div>
+
+  <div class="panel section">
+    <h2>Why a blockchain and not a database</h2>
+    <div class="why">
+      <div><b>One retirement state, many issuers</b>A certificate body, a plant selling directly to a factory and a utility reselling green power each keep their own books today. The same megawatt-hour can be counted in two of them. One shared contract holds the only "retired" flag.</div>
+      <div><b>Anyone can re-check a claim</b><span class="mono">matchedBps(consumer, from, to)</span> is a public read. An NGO, an auditor or a customer recomputes the share without an account or a data request.</div>
+      <div><b>Claims cannot be edited later</b><span class="mono">anchorClaim</span> stores the claim's hash together with a share computed by the contract itself, not supplied by the company.</div>
+    </div>
+    <p class="muted" style="font-size:14px;margin-bottom:0">Limit, stated plainly: if a single national registry published hourly certificates and opened read access, it could do most of this without a chain. Taiwan's registry issues certificates per 1,000 kWh today, not per hour.</p>
+  </div>
+
+  <footer>
+    <div id="chainInfo"></div>
+    <div>Code is MIT-licensed. The language model only turns the sentence into fields; every number and verdict on this page is computed by the ledger code in your browser.</div>
+  </footer>
+</div>
+<script type="module" src="app.js"></script>
+</body>
+</html>

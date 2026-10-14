@@ -1,0 +1,2865 @@
+{
+ "source": "Taiwan Power Company open data (data.gov.tw/dataset/8931), 10-minute snapshots archived at github.com/kiang/taipower_data",
+ "method": "hourly MWh = mean of the six 10-minute net-generation snapshots in that hour (subtotal rows per fuel type)",
+ "start": "2026-09-22",
+ "days": 7,
+ "missing_snapshots": 2,
+ "hours": [
+  {
+   "hour": "2026-09-22T00:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15107.5,
+    "ipp_lng": 2822.9,
+    "coal": 4313.2,
+    "ipp_coal": 771.6,
+    "cogen": 1454.3,
+    "fuel_oil": 189.3,
+    "solar": 0.0,
+    "wind": 2762.5,
+    "hydro": 712.7,
+    "storage": 711.1,
+    "other_renewable": 8.1
+   }
+  },
+  {
+   "hour": "2026-09-22T01:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15215.0,
+    "ipp_lng": 2775.0,
+    "coal": 4199.6,
+    "ipp_coal": 773.4,
+    "cogen": 1122.5,
+    "fuel_oil": 186.3,
+    "solar": 0.0,
+    "wind": 2674.5,
+    "hydro": 649.2,
+    "storage": 395.0,
+    "other_renewable": 8.8
+   }
+  },
+  {
+   "hour": "2026-09-22T02:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15502.7,
+    "ipp_lng": 2778.3,
+    "coal": 4196.2,
+    "ipp_coal": 774.6,
+    "cogen": 882.6,
+    "fuel_oil": 185.5,
+    "solar": 0.0,
+    "wind": 2551.4,
+    "hydro": 657.6,
+    "storage": 0.0,
+    "other_renewable": 8.0
+   }
+  },
+  {
+   "hour": "2026-09-22T03:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15073.2,
+    "ipp_lng": 2761.9,
+    "coal": 4200.2,
+    "ipp_coal": 771.8,
+    "cogen": 866.8,
+    "fuel_oil": 183.1,
+    "solar": 0.0,
+    "wind": 2447.7,
+    "hydro": 657.1,
+    "storage": 0.0,
+    "other_renewable": 8.4
+   }
+  },
+  {
+   "hour": "2026-09-22T04:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 14991.5,
+    "ipp_lng": 2761.4,
+    "coal": 4200.2,
+    "ipp_coal": 771.8,
+    "cogen": 881.6,
+    "fuel_oil": 184.3,
+    "solar": 0.0,
+    "wind": 2424.6,
+    "hydro": 562.0,
+    "storage": 0.0,
+    "other_renewable": 8.4
+   }
+  },
+  {
+   "hour": "2026-09-22T05:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 14932.8,
+    "ipp_lng": 2759.2,
+    "coal": 4201.4,
+    "ipp_coal": 769.4,
+    "cogen": 915.3,
+    "fuel_oil": 184.8,
+    "solar": 8.9,
+    "wind": 2639.0,
+    "hydro": 535.8,
+    "storage": 0.0,
+    "other_renewable": 8.8
+   }
+  },
+  {
+   "hour": "2026-09-22T06:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 14811.8,
+    "ipp_lng": 2756.8,
+    "coal": 4198.4,
+    "ipp_coal": 771.4,
+    "cogen": 917.4,
+    "fuel_oil": 183.1,
+    "solar": 333.3,
+    "wind": 2858.5,
+    "hydro": 495.5,
+    "storage": 0.0,
+    "other_renewable": 8.3
+   }
+  },
+  {
+   "hour": "2026-09-22T07:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 14539.8,
+    "ipp_lng": 2801.2,
+    "coal": 4194.2,
+    "ipp_coal": 771.1,
+    "cogen": 1118.4,
+    "fuel_oil": 185.2,
+    "solar": 2237.2,
+    "wind": 2998.0,
+    "hydro": 430.3,
+    "storage": 0.0,
+    "other_renewable": 8.3
+   }
+  },
+  {
+   "hour": "2026-09-22T08:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 14851.6,
+    "ipp_lng": 3521.7,
+    "coal": 4201.0,
+    "ipp_coal": 776.9,
+    "cogen": 1510.2,
+    "fuel_oil": 187.1,
+    "solar": 4529.2,
+    "wind": 2957.4,
+    "hydro": 431.1,
+    "storage": 31.6,
+    "other_renewable": 7.9
+   }
+  },
+  {
+   "hour": "2026-09-22T09:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 14569.9,
+    "ipp_lng": 3597.0,
+    "coal": 4199.5,
+    "ipp_coal": 773.4,
+    "cogen": 1804.1,
+    "fuel_oil": 186.9,
+    "solar": 6467.9,
+    "wind": 2872.5,
+    "hydro": 410.2,
+    "storage": 14.0,
+    "other_renewable": 8.0
+   }
+  },
+  {
+   "hour": "2026-09-22T10:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 14676.5,
+    "ipp_lng": 3670.2,
+    "coal": 4191.9,
+    "ipp_coal": 773.8,
+    "cogen": 1861.3,
+    "fuel_oil": 186.7,
+    "solar": 7589.8,
+    "wind": 2411.6,
+    "hydro": 410.0,
+    "storage": 7.7,
+    "other_renewable": 8.1
+   }
+  },
+  {
+   "hour": "2026-09-22T11:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15049.2,
+    "ipp_lng": 3771.6,
+    "coal": 4187.2,
+    "ipp_coal": 771.3,
+    "cogen": 1894.5,
+    "fuel_oil": 185.1,
+    "solar": 8286.8,
+    "wind": 2088.1,
+    "hydro": 488.6,
+    "storage": 17.2,
+    "other_renewable": 7.3
+   }
+  },
+  {
+   "hour": "2026-09-22T12:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15487.6,
+    "ipp_lng": 3774.5,
+    "coal": 4197.7,
+    "ipp_coal": 773.7,
+    "cogen": 1863.3,
+    "fuel_oil": 183.8,
+    "solar": 8428.8,
+    "wind": 2054.1,
+    "hydro": 473.8,
+    "storage": 0.0,
+    "other_renewable": 7.5
+   }
+  },
+  {
+   "hour": "2026-09-22T13:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15522.9,
+    "ipp_lng": 3909.6,
+    "coal": 4194.3,
+    "ipp_coal": 775.4,
+    "cogen": 1858.8,
+    "fuel_oil": 184.1,
+    "solar": 7687.8,
+    "wind": 2501.3,
+    "hydro": 481.6,
+    "storage": 12.9,
+    "other_renewable": 7.3
+   }
+  },
+  {
+   "hour": "2026-09-22T14:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15629.5,
+    "ipp_lng": 4425.9,
+    "coal": 4205.7,
+    "ipp_coal": 774.1,
+    "cogen": 1886.8,
+    "fuel_oil": 184.1,
+    "solar": 6623.9,
+    "wind": 2832.5,
+    "hydro": 515.4,
+    "storage": 13.3,
+    "other_renewable": 7.7
+   }
+  },
+  {
+   "hour": "2026-09-22T15:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15962.3,
+    "ipp_lng": 4822.8,
+    "coal": 4194.2,
+    "ipp_coal": 772.1,
+    "cogen": 1801.2,
+    "fuel_oil": 183.1,
+    "solar": 4861.4,
+    "wind": 3215.6,
+    "hydro": 535.3,
+    "storage": 123.0,
+    "other_renewable": 7.4
+   }
+  },
+  {
+   "hour": "2026-09-22T16:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16118.2,
+    "ipp_lng": 5093.7,
+    "coal": 4196.2,
+    "ipp_coal": 774.7,
+    "cogen": 1849.6,
+    "fuel_oil": 184.1,
+    "solar": 2600.7,
+    "wind": 3387.7,
+    "hydro": 647.6,
+    "storage": 689.9,
+    "other_renewable": 7.8
+   }
+  },
+  {
+   "hour": "2026-09-22T17:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15810.6,
+    "ipp_lng": 5498.2,
+    "coal": 4191.8,
+    "ipp_coal": 773.0,
+    "cogen": 1850.2,
+    "fuel_oil": 186.1,
+    "solar": 675.4,
+    "wind": 3424.5,
+    "hydro": 916.1,
+    "storage": 709.3,
+    "other_renewable": 7.8
+   }
+  },
+  {
+   "hour": "2026-09-22T18:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15880.5,
+    "ipp_lng": 5640.6,
+    "coal": 4193.8,
+    "ipp_coal": 774.9,
+    "cogen": 1902.8,
+    "fuel_oil": 192.0,
+    "solar": 0.0,
+    "wind": 3498.2,
+    "hydro": 1014.6,
+    "storage": 666.3,
+    "other_renewable": 8.2
+   }
+  },
+  {
+   "hour": "2026-09-22T19:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15724.0,
+    "ipp_lng": 5532.7,
+    "coal": 4200.4,
+    "ipp_coal": 774.6,
+    "cogen": 1863.0,
+    "fuel_oil": 199.0,
+    "solar": 0.0,
+    "wind": 3328.0,
+    "hydro": 1061.8,
+    "storage": 559.2,
+    "other_renewable": 8.7
+   }
+  },
+  {
+   "hour": "2026-09-22T20:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15725.2,
+    "ipp_lng": 5097.7,
+    "coal": 4201.3,
+    "ipp_coal": 774.6,
+    "cogen": 1837.4,
+    "fuel_oil": 196.8,
+    "solar": 0.0,
+    "wind": 2812.8,
+    "hydro": 1264.0,
+    "storage": 766.5,
+    "other_renewable": 12.7
+   }
+  },
+  {
+   "hour": "2026-09-22T21:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15944.9,
+    "ipp_lng": 4779.5,
+    "coal": 4203.0,
+    "ipp_coal": 773.8,
+    "cogen": 1815.4,
+    "fuel_oil": 192.6,
+    "solar": 0.0,
+    "wind": 2156.3,
+    "hydro": 1293.2,
+    "storage": 810.1,
+    "other_renewable": 17.6
+   }
+  },
+  {
+   "hour": "2026-09-22T22:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16456.9,
+    "ipp_lng": 4404.0,
+    "coal": 4197.6,
+    "ipp_coal": 773.6,
+    "cogen": 1801.9,
+    "fuel_oil": 194.3,
+    "solar": 0.0,
+    "wind": 1439.4,
+    "hydro": 1199.9,
+    "storage": 933.9,
+    "other_renewable": 19.1
+   }
+  },
+  {
+   "hour": "2026-09-22T23:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16718.2,
+    "ipp_lng": 3713.5,
+    "coal": 4203.6,
+    "ipp_coal": 773.4,
+    "cogen": 1731.6,
+    "fuel_oil": 197.8,
+    "solar": 0.0,
+    "wind": 1142.0,
+    "hydro": 731.2,
+    "storage": 912.9,
+    "other_renewable": 18.9
+   }
+  },
+  {
+   "hour": "2026-09-23T00:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16521.8,
+    "ipp_lng": 3391.5,
+    "coal": 4196.0,
+    "ipp_coal": 769.4,
+    "cogen": 1371.0,
+    "fuel_oil": 193.8,
+    "solar": 0.0,
+    "wind": 1161.8,
+    "hydro": 632.8,
+    "storage": 787.8,
+    "other_renewable": 18.7
+   }
+  },
+  {
+   "hour": "2026-09-23T01:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16325.8,
+    "ipp_lng": 3241.1,
+    "coal": 4193.0,
+    "ipp_coal": 772.6,
+    "cogen": 1025.5,
+    "fuel_oil": 191.5,
+    "solar": 0.0,
+    "wind": 1337.0,
+    "hydro": 599.1,
+    "storage": 457.8,
+    "other_renewable": 19.4
+   }
+  },
+  {
+   "hour": "2026-09-23T02:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16318.1,
+    "ipp_lng": 3078.3,
+    "coal": 4200.1,
+    "ipp_coal": 773.2,
+    "cogen": 884.5,
+    "fuel_oil": 191.5,
+    "solar": 0.0,
+    "wind": 1433.7,
+    "hydro": 611.2,
+    "storage": 191.3,
+    "other_renewable": 19.6
+   }
+  },
+  {
+   "hour": "2026-09-23T03:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16215.4,
+    "ipp_lng": 2707.4,
+    "coal": 4203.8,
+    "ipp_coal": 772.6,
+    "cogen": 864.4,
+    "fuel_oil": 191.2,
+    "solar": 0.0,
+    "wind": 1790.1,
+    "hydro": 621.1,
+    "storage": 23.3,
+    "other_renewable": 17.8
+   }
+  },
+  {
+   "hour": "2026-09-23T04:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15966.6,
+    "ipp_lng": 2706.5,
+    "coal": 4200.5,
+    "ipp_coal": 773.3,
+    "cogen": 864.8,
+    "fuel_oil": 191.8,
+    "solar": 0.0,
+    "wind": 1926.3,
+    "hydro": 527.9,
+    "storage": 0.0,
+    "other_renewable": 18.9
+   }
+  },
+  {
+   "hour": "2026-09-23T05:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16081.7,
+    "ipp_lng": 2383.2,
+    "coal": 4197.9,
+    "ipp_coal": 770.1,
+    "cogen": 881.2,
+    "fuel_oil": 192.3,
+    "solar": 7.3,
+    "wind": 1889.8,
+    "hydro": 502.6,
+    "storage": 0.0,
+    "other_renewable": 19.1
+   }
+  },
+  {
+   "hour": "2026-09-23T06:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16284.6,
+    "ipp_lng": 2303.7,
+    "coal": 4197.3,
+    "ipp_coal": 770.7,
+    "cogen": 875.8,
+    "fuel_oil": 193.1,
+    "solar": 365.5,
+    "wind": 1713.2,
+    "hydro": 468.8,
+    "storage": 1.7,
+    "other_renewable": 18.5
+   }
+  },
+  {
+   "hour": "2026-09-23T07:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16504.2,
+    "ipp_lng": 2301.4,
+    "coal": 4200.7,
+    "ipp_coal": 772.6,
+    "cogen": 1058.1,
+    "fuel_oil": 192.5,
+    "solar": 2515.1,
+    "wind": 1538.1,
+    "hydro": 490.7,
+    "storage": 0.0,
+    "other_renewable": 18.8
+   }
+  },
+  {
+   "hour": "2026-09-23T08:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 17018.3,
+    "ipp_lng": 2520.7,
+    "coal": 4198.2,
+    "ipp_coal": 774.5,
+    "cogen": 1412.2,
+    "fuel_oil": 191.5,
+    "solar": 5043.6,
+    "wind": 1546.3,
+    "hydro": 514.6,
+    "storage": 405.0,
+    "other_renewable": 17.5
+   }
+  },
+  {
+   "hour": "2026-09-23T09:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 17008.0,
+    "ipp_lng": 2674.1,
+    "coal": 4202.2,
+    "ipp_coal": 773.5,
+    "cogen": 1800.9,
+    "fuel_oil": 190.2,
+    "solar": 6454.3,
+    "wind": 1470.6,
+    "hydro": 508.8,
+    "storage": 224.8,
+    "other_renewable": 16.7
+   }
+  },
+  {
+   "hour": "2026-09-23T10:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16998.9,
+    "ipp_lng": 2757.0,
+    "coal": 4214.6,
+    "ipp_coal": 786.4,
+    "cogen": 1809.3,
+    "fuel_oil": 188.7,
+    "solar": 7023.0,
+    "wind": 1355.0,
+    "hydro": 585.0,
+    "storage": 303.4,
+    "other_renewable": 16.8
+   }
+  },
+  {
+   "hour": "2026-09-23T11:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16367.5,
+    "ipp_lng": 3187.5,
+    "coal": 4276.9,
+    "ipp_coal": 829.7,
+    "cogen": 1857.5,
+    "fuel_oil": 188.3,
+    "solar": 7603.0,
+    "wind": 1362.7,
+    "hydro": 523.7,
+    "storage": 543.1,
+    "other_renewable": 17.4
+   }
+  },
+  {
+   "hour": "2026-09-23T12:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15711.9,
+    "ipp_lng": 3737.1,
+    "coal": 4189.4,
+    "ipp_coal": 829.7,
+    "cogen": 1972.9,
+    "fuel_oil": 188.8,
+    "solar": 7822.6,
+    "wind": 1609.8,
+    "hydro": 506.2,
+    "storage": 28.7,
+    "other_renewable": 16.8
+   }
+  },
+  {
+   "hour": "2026-09-23T13:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16596.5,
+    "ipp_lng": 4293.3,
+    "coal": 4186.9,
+    "ipp_coal": 828.8,
+    "cogen": 1912.4,
+    "fuel_oil": 188.7,
+    "solar": 7460.1,
+    "wind": 1987.7,
+    "hydro": 497.0,
+    "storage": 2.9,
+    "other_renewable": 16.7
+   }
+  },
+  {
+   "hour": "2026-09-23T14:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16009.6,
+    "ipp_lng": 5197.6,
+    "coal": 4185.0,
+    "ipp_coal": 795.1,
+    "cogen": 1908.4,
+    "fuel_oil": 189.8,
+    "solar": 6842.9,
+    "wind": 2343.3,
+    "hydro": 543.7,
+    "storage": 2.4,
+    "other_renewable": 17.2
+   }
+  },
+  {
+   "hour": "2026-09-23T15:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16254.1,
+    "ipp_lng": 5696.4,
+    "coal": 4187.7,
+    "ipp_coal": 772.6,
+    "cogen": 1949.0,
+    "fuel_oil": 194.3,
+    "solar": 5073.4,
+    "wind": 2504.2,
+    "hydro": 594.3,
+    "storage": 87.8,
+    "other_renewable": 17.1
+   }
+  },
+  {
+   "hour": "2026-09-23T16:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16358.7,
+    "ipp_lng": 5766.2,
+    "coal": 4184.5,
+    "ipp_coal": 771.4,
+    "cogen": 1887.5,
+    "fuel_oil": 193.3,
+    "solar": 2680.7,
+    "wind": 2754.9,
+    "hydro": 651.5,
+    "storage": 870.7,
+    "other_renewable": 17.4
+   }
+  },
+  {
+   "hour": "2026-09-23T17:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16048.4,
+    "ipp_lng": 5790.0,
+    "coal": 4180.7,
+    "ipp_coal": 771.8,
+    "cogen": 1905.0,
+    "fuel_oil": 193.5,
+    "solar": 787.3,
+    "wind": 2813.5,
+    "hydro": 1147.2,
+    "storage": 1100.1,
+    "other_renewable": 17.0
+   }
+  },
+  {
+   "hour": "2026-09-23T18:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16285.7,
+    "ipp_lng": 5796.5,
+    "coal": 4186.0,
+    "ipp_coal": 771.7,
+    "cogen": 1905.5,
+    "fuel_oil": 194.7,
+    "solar": 0.0,
+    "wind": 2806.0,
+    "hydro": 1225.9,
+    "storage": 1427.1,
+    "other_renewable": 15.6
+   }
+  },
+  {
+   "hour": "2026-09-23T19:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16130.0,
+    "ipp_lng": 5806.1,
+    "coal": 4188.7,
+    "ipp_coal": 771.8,
+    "cogen": 1877.1,
+    "fuel_oil": 196.5,
+    "solar": 0.0,
+    "wind": 2671.8,
+    "hydro": 1242.4,
+    "storage": 1125.0,
+    "other_renewable": 17.6
+   }
+  },
+  {
+   "hour": "2026-09-23T20:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16322.8,
+    "ipp_lng": 5221.2,
+    "coal": 4193.2,
+    "ipp_coal": 774.4,
+    "cogen": 1851.1,
+    "fuel_oil": 195.6,
+    "solar": 0.0,
+    "wind": 2323.6,
+    "hydro": 1288.9,
+    "storage": 984.3,
+    "other_renewable": 18.6
+   }
+  },
+  {
+   "hour": "2026-09-23T21:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16346.5,
+    "ipp_lng": 5124.9,
+    "coal": 4183.6,
+    "ipp_coal": 774.8,
+    "cogen": 1801.5,
+    "fuel_oil": 195.5,
+    "solar": 0.0,
+    "wind": 1947.7,
+    "hydro": 1264.5,
+    "storage": 763.4,
+    "other_renewable": 18.2
+   }
+  },
+  {
+   "hour": "2026-09-23T22:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16301.7,
+    "ipp_lng": 5113.9,
+    "coal": 4189.3,
+    "ipp_coal": 771.4,
+    "cogen": 1814.7,
+    "fuel_oil": 194.4,
+    "solar": 0.0,
+    "wind": 1751.2,
+    "hydro": 1170.2,
+    "storage": 534.6,
+    "other_renewable": 17.8
+   }
+  },
+  {
+   "hour": "2026-09-23T23:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16114.3,
+    "ipp_lng": 4567.4,
+    "coal": 4192.2,
+    "ipp_coal": 772.6,
+    "cogen": 1778.4,
+    "fuel_oil": 192.0,
+    "solar": 0.0,
+    "wind": 1356.8,
+    "hydro": 1034.2,
+    "storage": 561.7,
+    "other_renewable": 18.5
+   }
+  },
+  {
+   "hour": "2026-09-24T00:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16309.8,
+    "ipp_lng": 3966.6,
+    "coal": 4185.5,
+    "ipp_coal": 777.6,
+    "cogen": 1405.6,
+    "fuel_oil": 186.6,
+    "solar": 0.0,
+    "wind": 1298.5,
+    "hydro": 832.9,
+    "storage": 588.4,
+    "other_renewable": 19.5
+   }
+  },
+  {
+   "hour": "2026-09-24T01:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16352.8,
+    "ipp_lng": 3902.3,
+    "coal": 4187.4,
+    "ipp_coal": 808.7,
+    "cogen": 1032.3,
+    "fuel_oil": 184.5,
+    "solar": 0.0,
+    "wind": 1440.4,
+    "hydro": 794.0,
+    "storage": 156.2,
+    "other_renewable": 19.1
+   }
+  },
+  {
+   "hour": "2026-09-24T02:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16257.5,
+    "ipp_lng": 3704.2,
+    "coal": 4183.0,
+    "ipp_coal": 908.8,
+    "cogen": 879.0,
+    "fuel_oil": 185.0,
+    "solar": 0.0,
+    "wind": 1665.6,
+    "hydro": 712.8,
+    "storage": 4.3,
+    "other_renewable": 20.5
+   }
+  },
+  {
+   "hour": "2026-09-24T03:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16326.7,
+    "ipp_lng": 3389.0,
+    "coal": 4185.0,
+    "ipp_coal": 864.4,
+    "cogen": 841.0,
+    "fuel_oil": 186.2,
+    "solar": 0.0,
+    "wind": 1457.5,
+    "hydro": 696.6,
+    "storage": 1.9,
+    "other_renewable": 19.8
+   }
+  },
+  {
+   "hour": "2026-09-24T04:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16349.3,
+    "ipp_lng": 3382.3,
+    "coal": 4182.1,
+    "ipp_coal": 775.5,
+    "cogen": 831.2,
+    "fuel_oil": 185.9,
+    "solar": 0.0,
+    "wind": 1167.0,
+    "hydro": 616.6,
+    "storage": 0.0,
+    "other_renewable": 19.3
+   }
+  },
+  {
+   "hour": "2026-09-24T05:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16436.1,
+    "ipp_lng": 3415.8,
+    "coal": 4264.2,
+    "ipp_coal": 770.8,
+    "cogen": 844.8,
+    "fuel_oil": 186.6,
+    "solar": 7.4,
+    "wind": 936.6,
+    "hydro": 632.5,
+    "storage": 0.0,
+    "other_renewable": 19.8
+   }
+  },
+  {
+   "hour": "2026-09-24T06:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16423.4,
+    "ipp_lng": 3434.8,
+    "coal": 4444.7,
+    "ipp_coal": 804.5,
+    "cogen": 862.4,
+    "fuel_oil": 186.9,
+    "solar": 319.0,
+    "wind": 727.1,
+    "hydro": 719.2,
+    "storage": 0.0,
+    "other_renewable": 19.8
+   }
+  },
+  {
+   "hour": "2026-09-24T07:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16122.2,
+    "ipp_lng": 3746.8,
+    "coal": 4471.0,
+    "ipp_coal": 788.8,
+    "cogen": 1095.6,
+    "fuel_oil": 188.7,
+    "solar": 2328.0,
+    "wind": 800.8,
+    "hydro": 536.6,
+    "storage": 0.0,
+    "other_renewable": 18.3
+   }
+  },
+  {
+   "hour": "2026-09-24T08:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16284.1,
+    "ipp_lng": 4066.1,
+    "coal": 4238.3,
+    "ipp_coal": 773.8,
+    "cogen": 1454.8,
+    "fuel_oil": 189.0,
+    "solar": 4971.7,
+    "wind": 963.4,
+    "hydro": 536.9,
+    "storage": 143.7,
+    "other_renewable": 18.1
+   }
+  },
+  {
+   "hour": "2026-09-24T09:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15797.8,
+    "ipp_lng": 4305.2,
+    "coal": 4214.3,
+    "ipp_coal": 772.6,
+    "cogen": 1714.6,
+    "fuel_oil": 188.0,
+    "solar": 6704.9,
+    "wind": 1126.7,
+    "hydro": 416.9,
+    "storage": 1.7,
+    "other_renewable": 17.7
+   }
+  },
+  {
+   "hour": "2026-09-24T10:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15880.1,
+    "ipp_lng": 4149.8,
+    "coal": 4223.6,
+    "ipp_coal": 773.1,
+    "cogen": 1869.5,
+    "fuel_oil": 189.4,
+    "solar": 7844.3,
+    "wind": 1315.6,
+    "hydro": 336.7,
+    "storage": 15.3,
+    "other_renewable": 18.0
+   }
+  },
+  {
+   "hour": "2026-09-24T11:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16025.7,
+    "ipp_lng": 4140.1,
+    "coal": 4247.2,
+    "ipp_coal": 773.2,
+    "cogen": 1903.8,
+    "fuel_oil": 188.0,
+    "solar": 8387.9,
+    "wind": 1519.3,
+    "hydro": 302.0,
+    "storage": 0.0,
+    "other_renewable": 18.1
+   }
+  },
+  {
+   "hour": "2026-09-24T12:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15310.2,
+    "ipp_lng": 4087.9,
+    "coal": 4305.4,
+    "ipp_coal": 772.2,
+    "cogen": 1901.4,
+    "fuel_oil": 187.5,
+    "solar": 8907.7,
+    "wind": 1735.0,
+    "hydro": 285.1,
+    "storage": 0.0,
+    "other_renewable": 17.9
+   }
+  },
+  {
+   "hour": "2026-09-24T13:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16038.9,
+    "ipp_lng": 4228.2,
+    "coal": 4416.9,
+    "ipp_coal": 771.6,
+    "cogen": 1940.8,
+    "fuel_oil": 188.2,
+    "solar": 8388.2,
+    "wind": 1691.3,
+    "hydro": 284.7,
+    "storage": 0.0,
+    "other_renewable": 17.4
+   }
+  },
+  {
+   "hour": "2026-09-24T14:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16327.0,
+    "ipp_lng": 4760.4,
+    "coal": 4487.2,
+    "ipp_coal": 770.1,
+    "cogen": 1882.7,
+    "fuel_oil": 187.4,
+    "solar": 7314.1,
+    "wind": 1833.3,
+    "hydro": 325.5,
+    "storage": 13.4,
+    "other_renewable": 18.2
+   }
+  },
+  {
+   "hour": "2026-09-24T15:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16729.9,
+    "ipp_lng": 4875.8,
+    "coal": 4499.0,
+    "ipp_coal": 770.7,
+    "cogen": 1859.3,
+    "fuel_oil": 186.7,
+    "solar": 5417.9,
+    "wind": 2171.7,
+    "hydro": 388.5,
+    "storage": 267.8,
+    "other_renewable": 18.2
+   }
+  },
+  {
+   "hour": "2026-09-24T16:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16841.8,
+    "ipp_lng": 5168.3,
+    "coal": 4565.6,
+    "ipp_coal": 771.4,
+    "cogen": 1866.0,
+    "fuel_oil": 189.4,
+    "solar": 2972.9,
+    "wind": 2307.6,
+    "hydro": 434.2,
+    "storage": 975.3,
+    "other_renewable": 18.2
+   }
+  },
+  {
+   "hour": "2026-09-24T17:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16623.0,
+    "ipp_lng": 5515.7,
+    "coal": 4574.9,
+    "ipp_coal": 772.2,
+    "cogen": 1887.8,
+    "fuel_oil": 200.4,
+    "solar": 950.1,
+    "wind": 2236.2,
+    "hydro": 606.5,
+    "storage": 1077.2,
+    "other_renewable": 18.0
+   }
+  },
+  {
+   "hour": "2026-09-24T18:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16783.5,
+    "ipp_lng": 5704.3,
+    "coal": 4556.3,
+    "ipp_coal": 772.8,
+    "cogen": 1908.8,
+    "fuel_oil": 200.4,
+    "solar": 0.0,
+    "wind": 2146.5,
+    "hydro": 700.4,
+    "storage": 1247.2,
+    "other_renewable": 18.2
+   }
+  },
+  {
+   "hour": "2026-09-24T19:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16616.6,
+    "ipp_lng": 5715.3,
+    "coal": 4592.1,
+    "ipp_coal": 773.3,
+    "cogen": 1849.8,
+    "fuel_oil": 205.5,
+    "solar": 0.0,
+    "wind": 1830.4,
+    "hydro": 755.9,
+    "storage": 1085.6,
+    "other_renewable": 18.1
+   }
+  },
+  {
+   "hour": "2026-09-24T20:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16856.4,
+    "ipp_lng": 5230.6,
+    "coal": 4586.8,
+    "ipp_coal": 772.9,
+    "cogen": 1800.4,
+    "fuel_oil": 205.8,
+    "solar": 0.0,
+    "wind": 1351.4,
+    "hydro": 734.4,
+    "storage": 1286.5,
+    "other_renewable": 17.6
+   }
+  },
+  {
+   "hour": "2026-09-24T21:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16996.0,
+    "ipp_lng": 4652.5,
+    "coal": 4749.2,
+    "ipp_coal": 771.6,
+    "cogen": 1768.6,
+    "fuel_oil": 205.4,
+    "solar": 0.0,
+    "wind": 1037.6,
+    "hydro": 654.9,
+    "storage": 1387.5,
+    "other_renewable": 16.9
+   }
+  },
+  {
+   "hour": "2026-09-24T22:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16973.1,
+    "ipp_lng": 4624.6,
+    "coal": 4933.6,
+    "ipp_coal": 770.4,
+    "cogen": 1769.1,
+    "fuel_oil": 205.7,
+    "solar": 0.0,
+    "wind": 758.2,
+    "hydro": 577.8,
+    "storage": 1326.9,
+    "other_renewable": 17.9
+   }
+  },
+  {
+   "hour": "2026-09-24T23:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16889.0,
+    "ipp_lng": 4544.4,
+    "coal": 4989.8,
+    "ipp_coal": 773.3,
+    "cogen": 1700.4,
+    "fuel_oil": 202.1,
+    "solar": 0.0,
+    "wind": 466.8,
+    "hydro": 514.1,
+    "storage": 789.7,
+    "other_renewable": 20.1
+   }
+  },
+  {
+   "hour": "2026-09-25T00:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16970.2,
+    "ipp_lng": 4084.8,
+    "coal": 5052.9,
+    "ipp_coal": 771.4,
+    "cogen": 1335.1,
+    "fuel_oil": 197.3,
+    "solar": 0.0,
+    "wind": 292.1,
+    "hydro": 488.1,
+    "storage": 781.5,
+    "other_renewable": 18.9
+   }
+  },
+  {
+   "hour": "2026-09-25T01:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16929.2,
+    "ipp_lng": 3635.2,
+    "coal": 5125.2,
+    "ipp_coal": 773.0,
+    "cogen": 993.1,
+    "fuel_oil": 194.1,
+    "solar": 0.0,
+    "wind": 376.0,
+    "hydro": 447.7,
+    "storage": 469.8,
+    "other_renewable": 19.4
+   }
+  },
+  {
+   "hour": "2026-09-25T02:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16690.2,
+    "ipp_lng": 3429.4,
+    "coal": 5127.2,
+    "ipp_coal": 774.8,
+    "cogen": 916.8,
+    "fuel_oil": 192.5,
+    "solar": 0.0,
+    "wind": 558.9,
+    "hydro": 439.4,
+    "storage": 57.6,
+    "other_renewable": 19.6
+   }
+  },
+  {
+   "hour": "2026-09-25T03:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16199.0,
+    "ipp_lng": 3363.2,
+    "coal": 5131.3,
+    "ipp_coal": 774.9,
+    "cogen": 862.4,
+    "fuel_oil": 192.7,
+    "solar": 0.0,
+    "wind": 585.0,
+    "hydro": 446.6,
+    "storage": 0.0,
+    "other_renewable": 19.8
+   }
+  },
+  {
+   "hour": "2026-09-25T04:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16128.1,
+    "ipp_lng": 3340.0,
+    "coal": 5131.2,
+    "ipp_coal": 772.9,
+    "cogen": 671.3,
+    "fuel_oil": 191.7,
+    "solar": 0.0,
+    "wind": 524.7,
+    "hydro": 363.9,
+    "storage": 3.0,
+    "other_renewable": 19.8
+   }
+  },
+  {
+   "hour": "2026-09-25T05:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16299.9,
+    "ipp_lng": 3387.7,
+    "coal": 5135.8,
+    "ipp_coal": 772.3,
+    "cogen": 517.0,
+    "fuel_oil": 189.9,
+    "solar": 8.6,
+    "wind": 529.8,
+    "hydro": 328.7,
+    "storage": 5.1,
+    "other_renewable": 18.9
+   }
+  },
+  {
+   "hour": "2026-09-25T06:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16416.0,
+    "ipp_lng": 2896.1,
+    "coal": 5143.4,
+    "ipp_coal": 771.3,
+    "cogen": 555.1,
+    "fuel_oil": 188.6,
+    "solar": 381.3,
+    "wind": 457.0,
+    "hydro": 330.6,
+    "storage": 0.0,
+    "other_renewable": 18.9
+   }
+  },
+  {
+   "hour": "2026-09-25T07:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15659.2,
+    "ipp_lng": 2670.4,
+    "coal": 5174.1,
+    "ipp_coal": 773.1,
+    "cogen": 554.4,
+    "fuel_oil": 186.8,
+    "solar": 2240.2,
+    "wind": 431.0,
+    "hydro": 326.7,
+    "storage": 0.0,
+    "other_renewable": 19.4
+   }
+  },
+  {
+   "hour": "2026-09-25T08:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 14798.4,
+    "ipp_lng": 2401.3,
+    "coal": 5188.1,
+    "ipp_coal": 774.6,
+    "cogen": 528.8,
+    "fuel_oil": 186.9,
+    "solar": 5024.1,
+    "wind": 419.3,
+    "hydro": 314.8,
+    "storage": 0.0,
+    "other_renewable": 17.8
+   }
+  },
+  {
+   "hour": "2026-09-25T09:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 14702.7,
+    "ipp_lng": 2019.6,
+    "coal": 5215.2,
+    "ipp_coal": 772.0,
+    "cogen": 647.9,
+    "fuel_oil": 188.5,
+    "solar": 7225.5,
+    "wind": 359.3,
+    "hydro": 310.0,
+    "storage": 0.0,
+    "other_renewable": 18.3
+   }
+  },
+  {
+   "hour": "2026-09-25T10:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 14997.9,
+    "ipp_lng": 1697.5,
+    "coal": 5261.8,
+    "ipp_coal": 772.9,
+    "cogen": 680.6,
+    "fuel_oil": 187.3,
+    "solar": 8526.6,
+    "wind": 443.4,
+    "hydro": 288.6,
+    "storage": 0.0,
+    "other_renewable": 16.6
+   }
+  },
+  {
+   "hour": "2026-09-25T11:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15183.2,
+    "ipp_lng": 1696.4,
+    "coal": 5278.7,
+    "ipp_coal": 772.7,
+    "cogen": 622.5,
+    "fuel_oil": 186.8,
+    "solar": 8938.7,
+    "wind": 518.3,
+    "hydro": 288.3,
+    "storage": 0.0,
+    "other_renewable": 17.4
+   }
+  },
+  {
+   "hour": "2026-09-25T12:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15089.1,
+    "ipp_lng": 1694.8,
+    "coal": 5348.2,
+    "ipp_coal": 772.5,
+    "cogen": 636.4,
+    "fuel_oil": 185.6,
+    "solar": 9095.6,
+    "wind": 560.0,
+    "hydro": 287.2,
+    "storage": 0.0,
+    "other_renewable": 18.1
+   }
+  },
+  {
+   "hour": "2026-09-25T13:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15647.4,
+    "ipp_lng": 1702.8,
+    "coal": 5396.6,
+    "ipp_coal": 773.8,
+    "cogen": 629.3,
+    "fuel_oil": 186.0,
+    "solar": 8604.4,
+    "wind": 578.2,
+    "hydro": 285.5,
+    "storage": 0.0,
+    "other_renewable": 18.3
+   }
+  },
+  {
+   "hour": "2026-09-25T14:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15932.4,
+    "ipp_lng": 1999.4,
+    "coal": 5454.5,
+    "ipp_coal": 773.5,
+    "cogen": 639.2,
+    "fuel_oil": 184.9,
+    "solar": 7448.0,
+    "wind": 513.6,
+    "hydro": 325.1,
+    "storage": 0.0,
+    "other_renewable": 17.3
+   }
+  },
+  {
+   "hour": "2026-09-25T15:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16218.1,
+    "ipp_lng": 2549.7,
+    "coal": 5644.9,
+    "ipp_coal": 774.5,
+    "cogen": 587.1,
+    "fuel_oil": 186.4,
+    "solar": 5429.3,
+    "wind": 433.0,
+    "hydro": 394.7,
+    "storage": 378.9,
+    "other_renewable": 17.6
+   }
+  },
+  {
+   "hour": "2026-09-25T16:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16719.6,
+    "ipp_lng": 3108.5,
+    "coal": 6084.3,
+    "ipp_coal": 774.4,
+    "cogen": 569.2,
+    "fuel_oil": 187.0,
+    "solar": 2941.9,
+    "wind": 353.4,
+    "hydro": 564.6,
+    "storage": 950.2,
+    "other_renewable": 17.5
+   }
+  },
+  {
+   "hour": "2026-09-25T17:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16931.2,
+    "ipp_lng": 3567.2,
+    "coal": 6528.8,
+    "ipp_coal": 933.5,
+    "cogen": 504.0,
+    "fuel_oil": 192.1,
+    "solar": 718.1,
+    "wind": 344.8,
+    "hydro": 684.1,
+    "storage": 1265.0,
+    "other_renewable": 17.6
+   }
+  },
+  {
+   "hour": "2026-09-25T18:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 17132.2,
+    "ipp_lng": 3611.8,
+    "coal": 6731.9,
+    "ipp_coal": 1123.1,
+    "cogen": 652.5,
+    "fuel_oil": 197.6,
+    "solar": 0.0,
+    "wind": 210.4,
+    "hydro": 643.2,
+    "storage": 1316.1,
+    "other_renewable": 17.9
+   }
+  },
+  {
+   "hour": "2026-09-25T19:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 17011.2,
+    "ipp_lng": 3635.9,
+    "coal": 6465.2,
+    "ipp_coal": 1125.2,
+    "cogen": 717.3,
+    "fuel_oil": 209.2,
+    "solar": 0.0,
+    "wind": 112.4,
+    "hydro": 663.2,
+    "storage": 1324.5,
+    "other_renewable": 17.9
+   }
+  },
+  {
+   "hour": "2026-09-25T20:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 17196.8,
+    "ipp_lng": 3617.7,
+    "coal": 6234.7,
+    "ipp_coal": 1125.1,
+    "cogen": 670.6,
+    "fuel_oil": 209.5,
+    "solar": 0.0,
+    "wind": 52.1,
+    "hydro": 646.4,
+    "storage": 1382.7,
+    "other_renewable": 18.9
+   }
+  },
+  {
+   "hour": "2026-09-25T21:00+08:00",
+   "samples": 5,
+   "mwh": {
+    "lng": 17231.3,
+    "ipp_lng": 3643.3,
+    "coal": 6166.4,
+    "ipp_coal": 1120.1,
+    "cogen": 731.0,
+    "fuel_oil": 211.0,
+    "solar": 0.0,
+    "wind": 49.0,
+    "hydro": 615.8,
+    "storage": 1112.2,
+    "other_renewable": 18.4
+   }
+  },
+  {
+   "hour": "2026-09-25T22:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 17133.7,
+    "ipp_lng": 3648.4,
+    "coal": 6143.8,
+    "ipp_coal": 1109.8,
+    "cogen": 804.8,
+    "fuel_oil": 209.4,
+    "solar": 0.0,
+    "wind": 39.1,
+    "hydro": 536.1,
+    "storage": 632.3,
+    "other_renewable": 18.0
+   }
+  },
+  {
+   "hour": "2026-09-25T23:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 17127.9,
+    "ipp_lng": 3115.3,
+    "coal": 5880.1,
+    "ipp_coal": 875.8,
+    "cogen": 801.8,
+    "fuel_oil": 209.6,
+    "solar": 0.0,
+    "wind": 36.6,
+    "hydro": 497.2,
+    "storage": 854.9,
+    "other_renewable": 18.2
+   }
+  },
+  {
+   "hour": "2026-09-26T00:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16806.0,
+    "ipp_lng": 2982.2,
+    "coal": 5660.7,
+    "ipp_coal": 774.6,
+    "cogen": 669.4,
+    "fuel_oil": 202.4,
+    "solar": 0.0,
+    "wind": 19.2,
+    "hydro": 443.3,
+    "storage": 894.7,
+    "other_renewable": 19.0
+   }
+  },
+  {
+   "hour": "2026-09-26T01:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16693.5,
+    "ipp_lng": 2616.4,
+    "coal": 5634.5,
+    "ipp_coal": 772.3,
+    "cogen": 535.2,
+    "fuel_oil": 199.1,
+    "solar": 0.0,
+    "wind": 14.1,
+    "hydro": 414.5,
+    "storage": 563.8,
+    "other_renewable": 18.1
+   }
+  },
+  {
+   "hour": "2026-09-26T02:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16627.3,
+    "ipp_lng": 1877.4,
+    "coal": 5637.2,
+    "ipp_coal": 773.5,
+    "cogen": 525.9,
+    "fuel_oil": 196.8,
+    "solar": 0.0,
+    "wind": 14.0,
+    "hydro": 424.6,
+    "storage": 475.7,
+    "other_renewable": 17.9
+   }
+  },
+  {
+   "hour": "2026-09-26T03:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16521.1,
+    "ipp_lng": 1361.5,
+    "coal": 5639.8,
+    "ipp_coal": 773.5,
+    "cogen": 533.9,
+    "fuel_oil": 194.2,
+    "solar": 0.0,
+    "wind": 13.7,
+    "hydro": 426.2,
+    "storage": 339.5,
+    "other_renewable": 18.8
+   }
+  },
+  {
+   "hour": "2026-09-26T04:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16454.4,
+    "ipp_lng": 1342.5,
+    "coal": 5631.1,
+    "ipp_coal": 775.1,
+    "cogen": 545.9,
+    "fuel_oil": 191.7,
+    "solar": 0.0,
+    "wind": 13.8,
+    "hydro": 321.1,
+    "storage": 169.4,
+    "other_renewable": 18.1
+   }
+  },
+  {
+   "hour": "2026-09-26T05:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16389.7,
+    "ipp_lng": 1340.6,
+    "coal": 5642.5,
+    "ipp_coal": 773.1,
+    "cogen": 551.9,
+    "fuel_oil": 192.2,
+    "solar": 7.5,
+    "wind": 15.6,
+    "hydro": 303.9,
+    "storage": 165.4,
+    "other_renewable": 18.4
+   }
+  },
+  {
+   "hour": "2026-09-26T06:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16429.3,
+    "ipp_lng": 1342.0,
+    "coal": 5640.6,
+    "ipp_coal": 773.6,
+    "cogen": 524.0,
+    "fuel_oil": 192.3,
+    "solar": 348.1,
+    "wind": 14.3,
+    "hydro": 303.3,
+    "storage": 3.0,
+    "other_renewable": 19.2
+   }
+  },
+  {
+   "hour": "2026-09-26T07:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16056.5,
+    "ipp_lng": 1340.5,
+    "coal": 5637.0,
+    "ipp_coal": 773.3,
+    "cogen": 542.7,
+    "fuel_oil": 186.5,
+    "solar": 2432.5,
+    "wind": 11.9,
+    "hydro": 303.6,
+    "storage": 4.6,
+    "other_renewable": 18.5
+   }
+  },
+  {
+   "hour": "2026-09-26T08:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16091.0,
+    "ipp_lng": 1340.3,
+    "coal": 5633.2,
+    "ipp_coal": 773.3,
+    "cogen": 608.3,
+    "fuel_oil": 182.9,
+    "solar": 4735.4,
+    "wind": 22.4,
+    "hydro": 282.4,
+    "storage": 0.0,
+    "other_renewable": 17.6
+   }
+  },
+  {
+   "hour": "2026-09-26T09:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15716.7,
+    "ipp_lng": 990.3,
+    "coal": 5641.0,
+    "ipp_coal": 774.1,
+    "cogen": 616.8,
+    "fuel_oil": 184.3,
+    "solar": 6753.8,
+    "wind": 20.7,
+    "hydro": 313.5,
+    "storage": 0.0,
+    "other_renewable": 17.4
+   }
+  },
+  {
+   "hour": "2026-09-26T10:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15348.7,
+    "ipp_lng": 898.8,
+    "coal": 5650.2,
+    "ipp_coal": 773.1,
+    "cogen": 589.1,
+    "fuel_oil": 183.2,
+    "solar": 8343.6,
+    "wind": 24.6,
+    "hydro": 331.7,
+    "storage": 0.0,
+    "other_renewable": 17.9
+   }
+  },
+  {
+   "hour": "2026-09-26T11:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15388.1,
+    "ipp_lng": 896.1,
+    "coal": 5634.3,
+    "ipp_coal": 771.9,
+    "cogen": 619.0,
+    "fuel_oil": 183.1,
+    "solar": 9072.8,
+    "wind": 35.4,
+    "hydro": 333.3,
+    "storage": 0.0,
+    "other_renewable": 17.0
+   }
+  },
+  {
+   "hour": "2026-09-26T12:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15522.8,
+    "ipp_lng": 894.4,
+    "coal": 5619.2,
+    "ipp_coal": 773.5,
+    "cogen": 604.5,
+    "fuel_oil": 182.0,
+    "solar": 9296.4,
+    "wind": 48.7,
+    "hydro": 336.4,
+    "storage": 0.0,
+    "other_renewable": 16.7
+   }
+  },
+  {
+   "hour": "2026-09-26T13:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16076.6,
+    "ipp_lng": 887.6,
+    "coal": 5638.9,
+    "ipp_coal": 774.3,
+    "cogen": 629.1,
+    "fuel_oil": 183.5,
+    "solar": 8905.9,
+    "wind": 83.6,
+    "hydro": 341.3,
+    "storage": 14.9,
+    "other_renewable": 18.2
+   }
+  },
+  {
+   "hour": "2026-09-26T14:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16160.9,
+    "ipp_lng": 1055.3,
+    "coal": 5660.3,
+    "ipp_coal": 774.4,
+    "cogen": 614.8,
+    "fuel_oil": 184.9,
+    "solar": 7874.1,
+    "wind": 122.4,
+    "hydro": 382.7,
+    "storage": 0.3,
+    "other_renewable": 17.0
+   }
+  },
+  {
+   "hour": "2026-09-26T15:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16069.2,
+    "ipp_lng": 2155.6,
+    "coal": 5995.6,
+    "ipp_coal": 773.7,
+    "cogen": 573.0,
+    "fuel_oil": 185.7,
+    "solar": 5806.0,
+    "wind": 165.0,
+    "hydro": 446.6,
+    "storage": 150.3,
+    "other_renewable": 18.6
+   }
+  },
+  {
+   "hour": "2026-09-26T16:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16420.6,
+    "ipp_lng": 3223.8,
+    "coal": 6362.6,
+    "ipp_coal": 800.1,
+    "cogen": 539.3,
+    "fuel_oil": 190.7,
+    "solar": 3214.5,
+    "wind": 119.8,
+    "hydro": 625.0,
+    "storage": 524.6,
+    "other_renewable": 18.2
+   }
+  },
+  {
+   "hour": "2026-09-26T17:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16801.6,
+    "ipp_lng": 3477.8,
+    "coal": 6571.7,
+    "ipp_coal": 1076.8,
+    "cogen": 506.9,
+    "fuel_oil": 194.0,
+    "solar": 744.9,
+    "wind": 84.2,
+    "hydro": 782.8,
+    "storage": 1231.1,
+    "other_renewable": 19.0
+   }
+  },
+  {
+   "hour": "2026-09-26T18:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 17056.9,
+    "ipp_lng": 3420.9,
+    "coal": 6940.7,
+    "ipp_coal": 1148.5,
+    "cogen": 593.8,
+    "fuel_oil": 196.7,
+    "solar": 0.0,
+    "wind": 24.8,
+    "hydro": 761.2,
+    "storage": 1407.5,
+    "other_renewable": 18.9
+   }
+  },
+  {
+   "hour": "2026-09-26T19:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16679.0,
+    "ipp_lng": 3484.6,
+    "coal": 7227.5,
+    "ipp_coal": 1158.1,
+    "cogen": 559.7,
+    "fuel_oil": 203.2,
+    "solar": 0.0,
+    "wind": 28.7,
+    "hydro": 777.6,
+    "storage": 1189.2,
+    "other_renewable": 17.2
+   }
+  },
+  {
+   "hour": "2026-09-26T20:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16710.6,
+    "ipp_lng": 3437.6,
+    "coal": 7057.8,
+    "ipp_coal": 1183.0,
+    "cogen": 532.3,
+    "fuel_oil": 207.6,
+    "solar": 0.0,
+    "wind": 38.9,
+    "hydro": 684.9,
+    "storage": 1225.4,
+    "other_renewable": 18.1
+   }
+  },
+  {
+   "hour": "2026-09-26T21:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16817.6,
+    "ipp_lng": 3421.5,
+    "coal": 6723.6,
+    "ipp_coal": 1197.7,
+    "cogen": 507.1,
+    "fuel_oil": 209.8,
+    "solar": 0.0,
+    "wind": 45.8,
+    "hydro": 549.7,
+    "storage": 1326.9,
+    "other_renewable": 18.5
+   }
+  },
+  {
+   "hour": "2026-09-26T22:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16838.4,
+    "ipp_lng": 3419.7,
+    "coal": 6387.7,
+    "ipp_coal": 1198.5,
+    "cogen": 521.3,
+    "fuel_oil": 209.1,
+    "solar": 0.0,
+    "wind": 61.7,
+    "hydro": 389.5,
+    "storage": 1099.5,
+    "other_renewable": 18.0
+   }
+  },
+  {
+   "hour": "2026-09-26T23:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16730.6,
+    "ipp_lng": 3074.4,
+    "coal": 6110.4,
+    "ipp_coal": 1198.9,
+    "cogen": 519.6,
+    "fuel_oil": 209.9,
+    "solar": 0.0,
+    "wind": 86.1,
+    "hydro": 368.7,
+    "storage": 1024.0,
+    "other_renewable": 17.8
+   }
+  },
+  {
+   "hour": "2026-09-27T00:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16467.9,
+    "ipp_lng": 2985.2,
+    "coal": 5748.0,
+    "ipp_coal": 1120.3,
+    "cogen": 499.1,
+    "fuel_oil": 200.7,
+    "solar": 0.0,
+    "wind": 78.1,
+    "hydro": 359.8,
+    "storage": 870.2,
+    "other_renewable": 17.7
+   }
+  },
+  {
+   "hour": "2026-09-27T01:00+08:00",
+   "samples": 5,
+   "mwh": {
+    "lng": 16038.6,
+    "ipp_lng": 2985.1,
+    "coal": 5471.9,
+    "ipp_coal": 906.1,
+    "cogen": 545.7,
+    "fuel_oil": 197.1,
+    "solar": 0.0,
+    "wind": 54.7,
+    "hydro": 342.6,
+    "storage": 741.0,
+    "other_renewable": 17.2
+   }
+  },
+  {
+   "hour": "2026-09-27T02:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15834.3,
+    "ipp_lng": 2835.3,
+    "coal": 5405.0,
+    "ipp_coal": 774.0,
+    "cogen": 509.8,
+    "fuel_oil": 194.5,
+    "solar": 0.0,
+    "wind": 60.7,
+    "hydro": 342.0,
+    "storage": 350.3,
+    "other_renewable": 17.2
+   }
+  },
+  {
+   "hour": "2026-09-27T03:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15847.2,
+    "ipp_lng": 2345.6,
+    "coal": 5397.4,
+    "ipp_coal": 772.6,
+    "cogen": 533.2,
+    "fuel_oil": 193.5,
+    "solar": 0.0,
+    "wind": 133.1,
+    "hydro": 342.8,
+    "storage": 184.1,
+    "other_renewable": 17.4
+   }
+  },
+  {
+   "hour": "2026-09-27T04:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15905.3,
+    "ipp_lng": 1972.2,
+    "coal": 5397.8,
+    "ipp_coal": 773.8,
+    "cogen": 532.2,
+    "fuel_oil": 192.9,
+    "solar": 0.0,
+    "wind": 227.6,
+    "hydro": 342.7,
+    "storage": 155.7,
+    "other_renewable": 18.0
+   }
+  },
+  {
+   "hour": "2026-09-27T05:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15836.6,
+    "ipp_lng": 1846.8,
+    "coal": 5393.3,
+    "ipp_coal": 774.1,
+    "cogen": 512.6,
+    "fuel_oil": 193.7,
+    "solar": 7.7,
+    "wind": 271.4,
+    "hydro": 342.7,
+    "storage": 148.5,
+    "other_renewable": 17.4
+   }
+  },
+  {
+   "hour": "2026-09-27T06:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15772.4,
+    "ipp_lng": 1467.2,
+    "coal": 5395.5,
+    "ipp_coal": 772.7,
+    "cogen": 499.0,
+    "fuel_oil": 191.0,
+    "solar": 400.6,
+    "wind": 276.1,
+    "hydro": 341.6,
+    "storage": 99.8,
+    "other_renewable": 17.2
+   }
+  },
+  {
+   "hour": "2026-09-27T07:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15280.1,
+    "ipp_lng": 1218.3,
+    "coal": 5196.0,
+    "ipp_coal": 772.7,
+    "cogen": 533.8,
+    "fuel_oil": 194.8,
+    "solar": 2549.8,
+    "wind": 320.6,
+    "hydro": 333.2,
+    "storage": 4.2,
+    "other_renewable": 17.4
+   }
+  },
+  {
+   "hour": "2026-09-27T08:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15129.2,
+    "ipp_lng": 900.7,
+    "coal": 4999.2,
+    "ipp_coal": 771.5,
+    "cogen": 593.4,
+    "fuel_oil": 195.7,
+    "solar": 5389.3,
+    "wind": 366.2,
+    "hydro": 302.5,
+    "storage": 0.0,
+    "other_renewable": 16.7
+   }
+  },
+  {
+   "hour": "2026-09-27T09:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 14332.2,
+    "ipp_lng": 898.5,
+    "coal": 4948.3,
+    "ipp_coal": 772.9,
+    "cogen": 613.8,
+    "fuel_oil": 195.2,
+    "solar": 7488.1,
+    "wind": 596.8,
+    "hydro": 274.5,
+    "storage": 0.0,
+    "other_renewable": 17.2
+   }
+  },
+  {
+   "hour": "2026-09-27T10:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 13879.9,
+    "ipp_lng": 894.6,
+    "coal": 5058.8,
+    "ipp_coal": 771.8,
+    "cogen": 668.5,
+    "fuel_oil": 195.4,
+    "solar": 8906.9,
+    "wind": 815.3,
+    "hydro": 278.1,
+    "storage": 0.0,
+    "other_renewable": 16.9
+   }
+  },
+  {
+   "hour": "2026-09-27T11:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 14007.7,
+    "ipp_lng": 891.5,
+    "coal": 5130.1,
+    "ipp_coal": 773.9,
+    "cogen": 736.1,
+    "fuel_oil": 196.6,
+    "solar": 9552.9,
+    "wind": 775.7,
+    "hydro": 285.0,
+    "storage": 0.0,
+    "other_renewable": 16.7
+   }
+  },
+  {
+   "hour": "2026-09-27T12:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 14082.6,
+    "ipp_lng": 889.6,
+    "coal": 5333.5,
+    "ipp_coal": 773.9,
+    "cogen": 748.8,
+    "fuel_oil": 195.9,
+    "solar": 9665.6,
+    "wind": 700.6,
+    "hydro": 290.5,
+    "storage": 0.0,
+    "other_renewable": 17.6
+   }
+  },
+  {
+   "hour": "2026-09-27T13:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 14299.9,
+    "ipp_lng": 887.7,
+    "coal": 5540.3,
+    "ipp_coal": 773.5,
+    "cogen": 769.0,
+    "fuel_oil": 195.7,
+    "solar": 8985.1,
+    "wind": 667.0,
+    "hydro": 290.9,
+    "storage": 3.5,
+    "other_renewable": 16.7
+   }
+  },
+  {
+   "hour": "2026-09-27T14:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 14592.8,
+    "ipp_lng": 1046.3,
+    "coal": 5618.0,
+    "ipp_coal": 771.2,
+    "cogen": 825.3,
+    "fuel_oil": 195.0,
+    "solar": 7836.7,
+    "wind": 572.5,
+    "hydro": 319.5,
+    "storage": 8.0,
+    "other_renewable": 16.5
+   }
+  },
+  {
+   "hour": "2026-09-27T15:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15646.1,
+    "ipp_lng": 2136.3,
+    "coal": 5637.8,
+    "ipp_coal": 773.9,
+    "cogen": 800.6,
+    "fuel_oil": 195.1,
+    "solar": 5845.1,
+    "wind": 550.4,
+    "hydro": 397.1,
+    "storage": 2.8,
+    "other_renewable": 17.2
+   }
+  },
+  {
+   "hour": "2026-09-27T16:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16490.4,
+    "ipp_lng": 2894.6,
+    "coal": 5693.6,
+    "ipp_coal": 951.9,
+    "cogen": 765.2,
+    "fuel_oil": 195.9,
+    "solar": 3223.8,
+    "wind": 514.0,
+    "hydro": 549.2,
+    "storage": 302.3,
+    "other_renewable": 17.1
+   }
+  },
+  {
+   "hour": "2026-09-27T17:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16869.9,
+    "ipp_lng": 3599.6,
+    "coal": 6076.9,
+    "ipp_coal": 1016.7,
+    "cogen": 723.7,
+    "fuel_oil": 199.8,
+    "solar": 768.2,
+    "wind": 462.6,
+    "hydro": 711.9,
+    "storage": 958.1,
+    "other_renewable": 16.1
+   }
+  },
+  {
+   "hour": "2026-09-27T18:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16587.4,
+    "ipp_lng": 3620.2,
+    "coal": 6454.0,
+    "ipp_coal": 999.6,
+    "cogen": 837.8,
+    "fuel_oil": 206.0,
+    "solar": 0.0,
+    "wind": 468.8,
+    "hydro": 927.1,
+    "storage": 1431.2,
+    "other_renewable": 17.6
+   }
+  },
+  {
+   "hour": "2026-09-27T19:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16664.6,
+    "ipp_lng": 3625.1,
+    "coal": 6111.3,
+    "ipp_coal": 991.4,
+    "cogen": 844.9,
+    "fuel_oil": 207.5,
+    "solar": 0.0,
+    "wind": 541.8,
+    "hydro": 898.5,
+    "storage": 1508.7,
+    "other_renewable": 16.5
+   }
+  },
+  {
+   "hour": "2026-09-27T20:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16590.9,
+    "ipp_lng": 3606.5,
+    "coal": 5851.1,
+    "ipp_coal": 992.7,
+    "cogen": 905.0,
+    "fuel_oil": 208.2,
+    "solar": 0.0,
+    "wind": 722.4,
+    "hydro": 771.8,
+    "storage": 1573.4,
+    "other_renewable": 18.4
+   }
+  },
+  {
+   "hour": "2026-09-27T21:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16626.9,
+    "ipp_lng": 3552.6,
+    "coal": 5823.5,
+    "ipp_coal": 995.0,
+    "cogen": 855.8,
+    "fuel_oil": 208.0,
+    "solar": 0.0,
+    "wind": 653.6,
+    "hydro": 676.5,
+    "storage": 1678.7,
+    "other_renewable": 17.8
+   }
+  },
+  {
+   "hour": "2026-09-27T22:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16742.7,
+    "ipp_lng": 3615.7,
+    "coal": 5464.5,
+    "ipp_coal": 993.2,
+    "cogen": 874.7,
+    "fuel_oil": 208.3,
+    "solar": 0.0,
+    "wind": 550.1,
+    "hydro": 570.6,
+    "storage": 1411.4,
+    "other_renewable": 17.4
+   }
+  },
+  {
+   "hour": "2026-09-27T23:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16690.1,
+    "ipp_lng": 2995.7,
+    "coal": 5207.2,
+    "ipp_coal": 996.4,
+    "cogen": 975.4,
+    "fuel_oil": 206.2,
+    "solar": 0.0,
+    "wind": 648.9,
+    "hydro": 560.9,
+    "storage": 1131.5,
+    "other_renewable": 17.1
+   }
+  },
+  {
+   "hour": "2026-09-28T00:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16453.3,
+    "ipp_lng": 2827.6,
+    "coal": 5065.6,
+    "ipp_coal": 995.6,
+    "cogen": 847.3,
+    "fuel_oil": 199.5,
+    "solar": 0.0,
+    "wind": 609.8,
+    "hydro": 496.2,
+    "storage": 900.9,
+    "other_renewable": 16.8
+   }
+  },
+  {
+   "hour": "2026-09-28T01:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16138.4,
+    "ipp_lng": 2425.2,
+    "coal": 4881.3,
+    "ipp_coal": 998.1,
+    "cogen": 805.5,
+    "fuel_oil": 194.8,
+    "solar": 0.0,
+    "wind": 778.0,
+    "hydro": 467.6,
+    "storage": 726.3,
+    "other_renewable": 16.8
+   }
+  },
+  {
+   "hour": "2026-09-28T02:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16002.1,
+    "ipp_lng": 2100.7,
+    "coal": 4885.9,
+    "ipp_coal": 1005.2,
+    "cogen": 891.0,
+    "fuel_oil": 193.5,
+    "solar": 0.0,
+    "wind": 906.5,
+    "hydro": 457.1,
+    "storage": 82.5,
+    "other_renewable": 16.1
+   }
+  },
+  {
+   "hour": "2026-09-28T03:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15549.3,
+    "ipp_lng": 1742.1,
+    "coal": 4894.7,
+    "ipp_coal": 964.4,
+    "cogen": 926.6,
+    "fuel_oil": 192.9,
+    "solar": 0.0,
+    "wind": 1018.5,
+    "hydro": 460.2,
+    "storage": 0.0,
+    "other_renewable": 16.9
+   }
+  },
+  {
+   "hour": "2026-09-28T04:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15326.8,
+    "ipp_lng": 1520.7,
+    "coal": 5015.8,
+    "ipp_coal": 1018.4,
+    "cogen": 926.9,
+    "fuel_oil": 193.4,
+    "solar": 0.0,
+    "wind": 1248.4,
+    "hydro": 343.1,
+    "storage": 0.0,
+    "other_renewable": 16.6
+   }
+  },
+  {
+   "hour": "2026-09-28T05:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15745.7,
+    "ipp_lng": 1301.0,
+    "coal": 5029.2,
+    "ipp_coal": 1038.3,
+    "cogen": 840.3,
+    "fuel_oil": 193.5,
+    "solar": 8.0,
+    "wind": 1049.1,
+    "hydro": 304.8,
+    "storage": 0.0,
+    "other_renewable": 16.9
+   }
+  },
+  {
+   "hour": "2026-09-28T06:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15596.3,
+    "ipp_lng": 1268.0,
+    "coal": 5053.0,
+    "ipp_coal": 997.8,
+    "cogen": 779.6,
+    "fuel_oil": 189.1,
+    "solar": 401.6,
+    "wind": 759.0,
+    "hydro": 304.1,
+    "storage": 0.0,
+    "other_renewable": 17.8
+   }
+  },
+  {
+   "hour": "2026-09-28T07:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15187.5,
+    "ipp_lng": 911.8,
+    "coal": 5101.4,
+    "ipp_coal": 925.5,
+    "cogen": 730.3,
+    "fuel_oil": 190.3,
+    "solar": 2673.5,
+    "wind": 659.2,
+    "hydro": 294.5,
+    "storage": 0.0,
+    "other_renewable": 17.1
+   }
+  },
+  {
+   "hour": "2026-09-28T08:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15127.4,
+    "ipp_lng": 898.1,
+    "coal": 5118.0,
+    "ipp_coal": 923.3,
+    "cogen": 776.8,
+    "fuel_oil": 189.7,
+    "solar": 5430.6,
+    "wind": 653.9,
+    "hydro": 277.2,
+    "storage": 0.0,
+    "other_renewable": 15.6
+   }
+  },
+  {
+   "hour": "2026-09-28T09:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15785.0,
+    "ipp_lng": 897.9,
+    "coal": 5249.4,
+    "ipp_coal": 922.5,
+    "cogen": 786.2,
+    "fuel_oil": 190.7,
+    "solar": 6773.6,
+    "wind": 590.5,
+    "hydro": 277.3,
+    "storage": 0.0,
+    "other_renewable": 15.9
+   }
+  },
+  {
+   "hour": "2026-09-28T10:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16199.6,
+    "ipp_lng": 931.0,
+    "coal": 5251.6,
+    "ipp_coal": 921.6,
+    "cogen": 742.1,
+    "fuel_oil": 188.1,
+    "solar": 7880.8,
+    "wind": 639.1,
+    "hydro": 279.5,
+    "storage": 0.0,
+    "other_renewable": 15.8
+   }
+  },
+  {
+   "hour": "2026-09-28T11:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15913.8,
+    "ipp_lng": 960.7,
+    "coal": 5740.8,
+    "ipp_coal": 924.5,
+    "cogen": 721.9,
+    "fuel_oil": 186.5,
+    "solar": 8761.4,
+    "wind": 719.7,
+    "hydro": 277.5,
+    "storage": 0.0,
+    "other_renewable": 15.4
+   }
+  },
+  {
+   "hour": "2026-09-28T12:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15271.5,
+    "ipp_lng": 1622.1,
+    "coal": 5998.6,
+    "ipp_coal": 920.3,
+    "cogen": 693.6,
+    "fuel_oil": 184.9,
+    "solar": 9161.3,
+    "wind": 819.1,
+    "hydro": 294.2,
+    "storage": 0.0,
+    "other_renewable": 15.2
+   }
+  },
+  {
+   "hour": "2026-09-28T13:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15285.9,
+    "ipp_lng": 2544.2,
+    "coal": 6014.3,
+    "ipp_coal": 922.7,
+    "cogen": 797.9,
+    "fuel_oil": 187.2,
+    "solar": 8869.1,
+    "wind": 854.2,
+    "hydro": 299.2,
+    "storage": 0.0,
+    "other_renewable": 15.3
+   }
+  },
+  {
+   "hour": "2026-09-28T14:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 15137.6,
+    "ipp_lng": 2995.6,
+    "coal": 6159.9,
+    "ipp_coal": 921.8,
+    "cogen": 791.9,
+    "fuel_oil": 187.1,
+    "solar": 7901.1,
+    "wind": 1048.5,
+    "hydro": 334.4,
+    "storage": 26.2,
+    "other_renewable": 15.8
+   }
+  },
+  {
+   "hour": "2026-09-28T15:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16087.0,
+    "ipp_lng": 3399.5,
+    "coal": 6354.6,
+    "ipp_coal": 981.2,
+    "cogen": 719.7,
+    "fuel_oil": 187.9,
+    "solar": 5919.3,
+    "wind": 1022.7,
+    "hydro": 383.7,
+    "storage": 17.5,
+    "other_renewable": 15.3
+   }
+  },
+  {
+   "hour": "2026-09-28T16:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16474.6,
+    "ipp_lng": 3750.6,
+    "coal": 6815.2,
+    "ipp_coal": 1139.2,
+    "cogen": 657.7,
+    "fuel_oil": 190.0,
+    "solar": 3253.7,
+    "wind": 799.4,
+    "hydro": 485.8,
+    "storage": 279.2,
+    "other_renewable": 15.7
+   }
+  },
+  {
+   "hour": "2026-09-28T17:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16612.0,
+    "ipp_lng": 3975.2,
+    "coal": 7274.9,
+    "ipp_coal": 1186.5,
+    "cogen": 661.9,
+    "fuel_oil": 197.1,
+    "solar": 650.6,
+    "wind": 681.8,
+    "hydro": 898.8,
+    "storage": 971.1,
+    "other_renewable": 15.5
+   }
+  },
+  {
+   "hour": "2026-09-28T18:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16691.1,
+    "ipp_lng": 4015.7,
+    "coal": 7604.2,
+    "ipp_coal": 1184.4,
+    "cogen": 680.4,
+    "fuel_oil": 198.2,
+    "solar": 0.0,
+    "wind": 522.2,
+    "hydro": 1003.7,
+    "storage": 1592.1,
+    "other_renewable": 19.2
+   }
+  },
+  {
+   "hour": "2026-09-28T19:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16677.1,
+    "ipp_lng": 3997.5,
+    "coal": 7715.1,
+    "ipp_coal": 1190.0,
+    "cogen": 675.3,
+    "fuel_oil": 208.7,
+    "solar": 0.0,
+    "wind": 438.5,
+    "hydro": 1065.1,
+    "storage": 1330.2,
+    "other_renewable": 21.4
+   }
+  },
+  {
+   "hour": "2026-09-28T20:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16815.9,
+    "ipp_lng": 3936.3,
+    "coal": 7481.5,
+    "ipp_coal": 1191.3,
+    "cogen": 715.6,
+    "fuel_oil": 207.8,
+    "solar": 0.0,
+    "wind": 400.5,
+    "hydro": 1011.8,
+    "storage": 1370.8,
+    "other_renewable": 22.3
+   }
+  },
+  {
+   "hour": "2026-09-28T21:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16888.9,
+    "ipp_lng": 3933.2,
+    "coal": 7428.6,
+    "ipp_coal": 1199.8,
+    "cogen": 718.1,
+    "fuel_oil": 209.8,
+    "solar": 0.0,
+    "wind": 471.6,
+    "hydro": 674.0,
+    "storage": 1237.8,
+    "other_renewable": 21.9
+   }
+  },
+  {
+   "hour": "2026-09-28T22:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16659.7,
+    "ipp_lng": 3896.4,
+    "coal": 7256.7,
+    "ipp_coal": 1203.2,
+    "cogen": 672.7,
+    "fuel_oil": 206.5,
+    "solar": 0.0,
+    "wind": 503.7,
+    "hydro": 584.4,
+    "storage": 654.2,
+    "other_renewable": 22.0
+   }
+  },
+  {
+   "hour": "2026-09-28T23:00+08:00",
+   "samples": 6,
+   "mwh": {
+    "lng": 16161.2,
+    "ipp_lng": 3744.6,
+    "coal": 6823.5,
+    "ipp_coal": 1201.7,
+    "cogen": 649.6,
+    "fuel_oil": 201.0,
+    "solar": 0.0,
+    "wind": 432.3,
+    "hydro": 545.4,
+    "storage": 511.6,
+    "other_renewable": 21.1
+   }
+  }
+ ]
+}

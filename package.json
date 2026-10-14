@@ -1,0 +1,17 @@
+{
+  "name": "hourmatch",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Hourly renewable energy certificates on a shared ledger, plus an AI checker for green-power claims.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/ && npx hardhat test",
+    "compile": "npx hardhat compile"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^3.1.3",
+    "ethers": "^6.17.0",
+    "hardhat": "^2.29.1"
+  }
+}
